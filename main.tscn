@@ -1,15 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://m3asolprjd82"]
+[gd_scene load_steps=8 format=3 uid="uid://m3asolprjd82"]
 
 [ext_resource type="Script" path="res://Bot.gd" id="1_2616l"]
 [ext_resource type="Texture2D" uid="uid://i7cbv3lf4avw" path="res://icon.svg" id="2_i7ao5"]
+[ext_resource type="Script" path="res://Package.gd" id="3_6ldhq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3l3m"]
 size = Vector2(128, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5c0f"]
+size = Vector2(20, 1080)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3t5t"]
+size = Vector2(1920, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmq1d"]
+size = Vector2(64, 64)
+
 [node name="Main" type="Node2D"]
 
 [node name="Bot" type="CharacterBody2D" parent="."]
-position = Vector2(773, 493)
+position = Vector2(345, 985)
 script = ExtResource("1_2616l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bot"]
@@ -17,5 +27,36 @@ shape = SubResource("RectangleShape2D_i3l3m")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Bot"]
+position = Vector2(0, 1.90735e-05)
+scale = Vector2(1, 0.109375)
 texture = ExtResource("2_i7ao5")
 metadata/_edit_lock_ = true
+
+[node name="Frame" type="Area2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Frame"]
+
+[node name="Wall2" type="CollisionShape2D" parent="Frame/StaticBody2D"]
+position = Vector2(1929, 544)
+shape = SubResource("RectangleShape2D_n5c0f")
+
+[node name="Wall" type="CollisionShape2D" parent="Frame/StaticBody2D"]
+position = Vector2(-13, 546)
+shape = SubResource("RectangleShape2D_n5c0f")
+
+[node name="Floor" type="CollisionShape2D" parent="Frame/StaticBody2D"]
+position = Vector2(958, 1009)
+shape = SubResource("RectangleShape2D_t3t5t")
+
+[node name="Package" type="RigidBody2D" parent="."]
+collision_layer = 2
+script = ExtResource("3_6ldhq")
+
+[node name="BigPackage" type="CollisionShape2D" parent="Package"]
+position = Vector2(441, 144)
+shape = SubResource("RectangleShape2D_pmq1d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Package/BigPackage"]
+position = Vector2(-1, -1.01328e-06)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_i7ao5")
