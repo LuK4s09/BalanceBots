@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
-var JUMP_SPEED = 100
-var SPEED = 800.0
+var SPEED = 500.0
 var min_y_position = 970
 
 func _physics_process(delta):
@@ -12,20 +11,15 @@ func _physics_process(delta):
 		velocity.x -= SPEED
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += SPEED
+	if Input.is_action_pressed("ui_up"):
+		velocity.y -= SPEED
+	if Input.is_action_pressed("ui_down"):
+		velocity.y += SPEED
 	
 	
 	# min height
 	if position.y > min_y_position:
 		position.y = min_y_position
 	
-	#Jump-Ability 
-	if Input.is_action_pressed("ui_accept"):
-		velocity.y -= JUMP_SPEED
 	 
 	move_and_slide()
-
-
-
-
-func _on_package_body_entered(body):
-	pass
