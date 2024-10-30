@@ -20,6 +20,7 @@ position = Vector2(914, 970)
 collision_layer = 3
 collision_mask = 3
 motion_mode = 1
+platform_on_leave = 1
 script = ExtResource("1_2616l")
 
 [node name="BotCollisionShape2D" type="CollisionShape2D" parent="Bot"]
@@ -33,7 +34,6 @@ texture = ExtResource("2_i7ao5")
 metadata/_edit_lock_ = true
 
 [node name="Package" type="RigidBody2D" parent="."]
-position = Vector2(-1, 0)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("3_6ldhq")

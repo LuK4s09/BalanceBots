@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-var JUMP_SPEED = 100
 var SPEED = 500.0
 var min_y_position = 970
 
