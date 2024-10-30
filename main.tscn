@@ -18,5 +18,5 @@ Package = ExtResource("2_q1knv")
 
 [node name="Timer" type="Timer" parent="PackageSpawner"]
 
-[node name="Package" parent="PackageSpawner" instance=ExtResource("2_q1knv")]
+[node name="Package" parent="." instance=ExtResource("2_q1knv")]
 position = Vector2(2029, 45)
