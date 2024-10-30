@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var SPEED = 500.0
+var SPEED = 650.0
 var min_y_position = 970
 
 func get_input():
