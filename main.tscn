@@ -1,67 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://m3asolprjd82"]
+[gd_scene load_steps=4 format=3 uid="uid://m3asolprjd82"]
 
-[ext_resource type="Script" path="res://Bot.gd" id="1_2616l"]
-[ext_resource type="Texture2D" uid="uid://cn42f2ixmamav" path="res://botWip1.png" id="2_3odod"]
-[ext_resource type="Script" path="res://Package.gd" id="3_6ldhq"]
-[ext_resource type="Texture2D" uid="uid://bhmlvnmni1n1t" path="res://Kiste32x32.png" id="4_y08oa"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3l3m"]
-size = Vector2(268, 28)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hsrwn"]
-friction = 4.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmq1d"]
-size = Vector2(64, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5c0f"]
-size = Vector2(20, 1080)
+[ext_resource type="PackedScene" uid="uid://d0agi2omt3r03" path="res://bot1.tscn" id="3_a8o5f"]
+[ext_resource type="PackedScene" uid="uid://dq32yttt5pqel" path="res://package.tscn" id="3_iidb8"]
+[ext_resource type="PackedScene" uid="uid://b406w4ii8jjdb" path="res://frame.tscn" id="4_m1v28"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Bot" type="CharacterBody2D" parent="."]
-position = Vector2(921, 960)
-collision_layer = 3
-motion_mode = 1
-platform_on_leave = 1
-script = ExtResource("1_2616l")
+[node name="Package" parent="." instance=ExtResource("3_iidb8")]
+position = Vector2(818, -69)
 
-[node name="BotCollisionShape2D" type="CollisionShape2D" parent="Bot"]
-position = Vector2(-70, -6)
-shape = SubResource("RectangleShape2D_i3l3m")
-metadata/_edit_lock_ = true
+[node name="Frame" parent="." instance=ExtResource("4_m1v28")]
 
-[node name="BotWip1" type="Sprite2D" parent="Bot"]
-texture_filter = 3
-position = Vector2(-65, 69)
-scale = Vector2(3.38136, 2.92647)
-texture = ExtResource("2_3odod")
-metadata/_edit_lock_ = true
-
-[node name="Package" type="RigidBody2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-mass = 4.0
-physics_material_override = SubResource("PhysicsMaterial_hsrwn")
-script = ExtResource("3_6ldhq")
-
-[node name="BigPackage" type="CollisionShape2D" parent="Package"]
-position = Vector2(903, 101)
-shape = SubResource("RectangleShape2D_pmq1d")
-
-[node name="Kiste32x32" type="Sprite2D" parent="Package"]
-texture_filter = 3
-position = Vector2(903, 101)
-scale = Vector2(2, 2)
-texture = ExtResource("4_y08oa")
-metadata/_edit_lock_ = true
-
-[node name="Frame" type="StaticBody2D" parent="."]
-
-[node name="Wall2" type="CollisionShape2D" parent="Frame"]
-position = Vector2(1929, 544)
-shape = SubResource("RectangleShape2D_n5c0f")
-
-[node name="Wall" type="CollisionShape2D" parent="Frame"]
-position = Vector2(-13, 546)
-shape = SubResource("RectangleShape2D_n5c0f")
+[node name="Bot" parent="." instance=ExtResource("3_a8o5f")]
+position = Vector2(809, 630)

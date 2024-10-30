@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0agi2omt3r03"]
+
+[ext_resource type="Script" path="res://Bot.gd" id="1_oi7yq"]
+[ext_resource type="Texture2D" uid="uid://cn42f2ixmamav" path="res://botWip1.png" id="2_vmwaa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ir0q"]
+size = Vector2(268, 28)
+
+[node name="Bot" type="CharacterBody2D"]
+position = Vector2(921, 960)
+collision_layer = 3
+motion_mode = 1
+platform_on_leave = 1
+script = ExtResource("1_oi7yq")
+
+[node name="BotCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-70, -6)
+shape = SubResource("RectangleShape2D_1ir0q")
+metadata/_edit_lock_ = true
+
+[node name="BotWip1" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(-65, 69)
+scale = Vector2(3.38136, 2.92647)
+texture = ExtResource("2_vmwaa")
+metadata/_edit_lock_ = true
