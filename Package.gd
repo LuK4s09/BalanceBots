@@ -2,9 +2,8 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-	#prevents package from freezing in air
-	#can_sleep = false
+	can_sleep = false #prevents packages from freezing in air
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
