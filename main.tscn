@@ -16,7 +16,7 @@ size = Vector2(20, 1080)
 [node name="Main" type="Node2D"]
 
 [node name="Bot" type="CharacterBody2D" parent="."]
-position = Vector2(439, 876)
+position = Vector2(914, 970)
 collision_layer = 3
 collision_mask = 3
 motion_mode = 1
@@ -39,13 +39,14 @@ collision_mask = 2
 script = ExtResource("3_6ldhq")
 
 [node name="BigPackage" type="CollisionShape2D" parent="Package"]
-position = Vector2(441, 144)
+position = Vector2(903, 101)
 shape = SubResource("RectangleShape2D_pmq1d")
 
 [node name="Sprite2D" type="Sprite2D" parent="Package/BigPackage"]
 position = Vector2(-1, -1.01328e-06)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_i7ao5")
+metadata/_edit_lock_ = true
 
 [node name="Frame" type="StaticBody2D" parent="."]
 
