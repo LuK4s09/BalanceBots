@@ -1,62 +1,22 @@
-[gd_scene load_steps=8 format=3 uid="uid://m3asolprjd82"]
+[gd_scene load_steps=5 format=3 uid="uid://m3asolprjd82"]
 
-[ext_resource type="Script" path="res://Bot.gd" id="1_2616l"]
-[ext_resource type="Texture2D" uid="uid://i7cbv3lf4avw" path="res://icon.svg" id="2_i7ao5"]
-[ext_resource type="Script" path="res://Package.gd" id="3_6ldhq"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3l3m"]
-size = Vector2(128, 16)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jdf7t"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmq1d"]
-size = Vector2(64, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5c0f"]
-size = Vector2(20, 1080)
+[ext_resource type="PackedScene" uid="uid://dwg7nb0gl4l7m" path="res://bot.tscn" id="1_3d6hg"]
+[ext_resource type="PackedScene" uid="uid://i84jt28ld3tk" path="res://package.tscn" id="2_q1knv"]
+[ext_resource type="PackedScene" uid="uid://dq5ux3dc4oxms" path="res://frame.tscn" id="3_w0m6r"]
+[ext_resource type="Script" path="res://PackageSpawner.gd" id="4_poox6"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Bot" type="CharacterBody2D" parent="."]
-position = Vector2(914, 970)
-collision_layer = 3
-motion_mode = 1
-platform_on_leave = 1
-script = ExtResource("1_2616l")
+[node name="Bot" parent="." instance=ExtResource("1_3d6hg")]
+position = Vector2(960, 970)
 
-[node name="BotCollisionShape2D" type="CollisionShape2D" parent="Bot"]
-shape = SubResource("RectangleShape2D_i3l3m")
-metadata/_edit_lock_ = true
+[node name="Frame" parent="." instance=ExtResource("3_w0m6r")]
 
-[node name="Sprite2D" type="Sprite2D" parent="Bot"]
-position = Vector2(0, 1.90735e-05)
-scale = Vector2(1, 0.109375)
-texture = ExtResource("2_i7ao5")
-metadata/_edit_lock_ = true
+[node name="PackageSpawner" type="Node2D" parent="."]
+script = ExtResource("4_poox6")
+Package = ExtResource("2_q1knv")
 
-[node name="Package" type="RigidBody2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-mass = 2.4
-physics_material_override = SubResource("PhysicsMaterial_jdf7t")
-script = ExtResource("3_6ldhq")
+[node name="Timer" type="Timer" parent="PackageSpawner"]
 
-[node name="BigPackage" type="CollisionShape2D" parent="Package"]
-position = Vector2(903, 101)
-shape = SubResource("RectangleShape2D_pmq1d")
-
-[node name="Sprite2D" type="Sprite2D" parent="Package/BigPackage"]
-position = Vector2(-1, -1.01328e-06)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_i7ao5")
-metadata/_edit_lock_ = true
-
-[node name="Frame" type="StaticBody2D" parent="."]
-
-[node name="Wall2" type="CollisionShape2D" parent="Frame"]
-position = Vector2(1929, 544)
-shape = SubResource("RectangleShape2D_n5c0f")
-
-[node name="Wall" type="CollisionShape2D" parent="Frame"]
-position = Vector2(-13, 546)
-shape = SubResource("RectangleShape2D_n5c0f")
+[node name="Package" parent="PackageSpawner" instance=ExtResource("2_q1knv")]
+position = Vector2(2029, 45)

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var SPEED = 200.0
+var SPEED = 400.0
 var min_y_position = 970
 
 func _physics_process(delta):
