@@ -1,15 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://m3asolprjd82"]
+[gd_scene load_steps=5 format=3 uid="uid://m3asolprjd82"]
 
+[ext_resource type="PackedScene" uid="uid://du5daq5unqrt7" path="res://background.tscn" id="1_8skxn"]
 [ext_resource type="PackedScene" uid="uid://d0agi2omt3r03" path="res://bot1.tscn" id="3_a8o5f"]
 [ext_resource type="PackedScene" uid="uid://dq32yttt5pqel" path="res://package.tscn" id="3_iidb8"]
 [ext_resource type="PackedScene" uid="uid://b406w4ii8jjdb" path="res://frame.tscn" id="4_m1v28"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Package" parent="." instance=ExtResource("3_iidb8")]
-position = Vector2(818, -69)
+[node name="Background" parent="." instance=ExtResource("1_8skxn")]
+position = Vector2(-7, -34)
 
 [node name="Frame" parent="." instance=ExtResource("4_m1v28")]
+
+[node name="Package" parent="." instance=ExtResource("3_iidb8")]
+position = Vector2(650, -89)
 
 [node name="Bot" parent="." instance=ExtResource("3_a8o5f")]
 position = Vector2(809, 630)

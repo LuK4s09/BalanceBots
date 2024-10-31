@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://du5daq5unqrt7"]
+
+[ext_resource type="Texture2D" uid="uid://c6gxgo56as047" path="res://BalBotsBackgScrNoBots.png" id="1_je1hv"]
+[ext_resource type="Texture2D" uid="uid://do087k2x3yvg6" path="res://illuminatingDisplayPressE.png" id="2_u32kl"]
+
+[node name="Background" type="Node2D"]
+
+[node name="BalBotsBackgScrNoBots" type="Sprite2D" parent="."]
+position = Vector2(974.5, 556.844)
+scale = Vector2(1.0349, 1.0349)
+texture = ExtResource("1_je1hv")
+
+[node name="IlluminatingDisplayPressE" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(112, 210)
+scale = Vector2(4.32813, 4.32813)
+texture = ExtResource("2_u32kl")
