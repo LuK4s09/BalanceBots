@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://b406w4ii8jjdb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj0gi"]
+size = Vector2(21.875, 374.016)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfm8i"]
+size = Vector2(20, 412.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cxqy"]
+size = Vector2(238.25, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8umj"]
+size = Vector2(9, 293)
+
+[node name="wallsLeftAndRight" type="StaticBody2D"]
+metadata/_edit_lock_ = true
+
+[node name="wallLeft1" type="CollisionShape2D" parent="."]
+position = Vector2(-10.875, 186.992)
+shape = SubResource("RectangleShape2D_fj0gi")
+
+[node name="wallRight1" type="CollisionShape2D" parent="."]
+position = Vector2(1931, 188)
+shape = SubResource("RectangleShape2D_fj0gi")
+
+[node name="wallLeft2" type="CollisionShape2D" parent="."]
+position = Vector2(-10, 873.625)
+shape = SubResource("RectangleShape2D_sfm8i")
+
+[node name="wallRight2" type="CollisionShape2D" parent="."]
+position = Vector2(1931, 873.313)
+shape = SubResource("RectangleShape2D_sfm8i")
+
+[node name="wallGateLeftTop" type="CollisionShape2D" parent="."]
+position = Vector2(-140.75, 364)
+shape = SubResource("RectangleShape2D_8cxqy")
+
+[node name="wallGateLeftBottom" type="CollisionShape2D" parent="."]
+position = Vector2(-139, 677)
+shape = SubResource("RectangleShape2D_8cxqy")
+
+[node name="wallGateLeftWall" type="CollisionShape2D" parent="."]
+position = Vector2(-255.5, 520.5)
+shape = SubResource("RectangleShape2D_n8umj")
+
+[node name="wallGateRightTop" type="CollisionShape2D" parent="."]
+position = Vector2(2061, 365)
+shape = SubResource("RectangleShape2D_8cxqy")
+
+[node name="wallGateRightBottom" type="CollisionShape2D" parent="."]
+position = Vector2(2060, 677)
+shape = SubResource("RectangleShape2D_8cxqy")
+
+[node name="wallGateRightWall" type="CollisionShape2D" parent="."]
+position = Vector2(2176, 521)
+shape = SubResource("RectangleShape2D_n8umj")
