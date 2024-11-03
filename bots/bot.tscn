@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0agi2omt3r03"]
+[gd_scene load_steps=5 format=3 uid="uid://d0agi2omt3r03"]
 
 [ext_resource type="Script" path="res://bots/Bot.gd" id="1_oi7yq"]
-[ext_resource type="Texture2D" uid="uid://cn42f2ixmamav" path="res://bots/botWip1.png" id="2_vmwaa"]
+[ext_resource type="Texture2D" uid="uid://c4ew04s6c1h4d" path="res://bots/botWip11.png" id="2_gp36l"]
+[ext_resource type="Texture2D" uid="uid://dxlfmqpqldxej" path="res://bots/botWip21.png" id="3_fsjdt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ir0q"]
-size = Vector2(268, 28)
+size = Vector2(268, 31)
 
 [node name="Bot" type="CharacterBody2D"]
 position = Vector2(921, 960)
@@ -14,13 +15,20 @@ platform_on_leave = 1
 script = ExtResource("1_oi7yq")
 
 [node name="BotCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-70, -6)
+position = Vector2(-70, -5.5)
 shape = SubResource("RectangleShape2D_1ir0q")
 metadata/_edit_lock_ = true
 
-[node name="BotWip1" type="Sprite2D" parent="."]
+[node name="BotWip11" type="Sprite2D" parent="."]
 texture_filter = 3
-position = Vector2(-65, 69)
-scale = Vector2(3.38136, 2.92647)
-texture = ExtResource("2_vmwaa")
+position = Vector2(-65, 81)
+scale = Vector2(3.38971, 3.38971)
+texture = ExtResource("2_gp36l")
+metadata/_edit_lock_ = true
+
+[node name="BotWip21" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(-65, 81)
+scale = Vector2(3.38787, 3.38787)
+texture = ExtResource("3_fsjdt")
 metadata/_edit_lock_ = true

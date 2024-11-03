@@ -35,10 +35,10 @@ position = Vector2(-171, 406)
 position = Vector2(2029, 403)
 
 [node name="PointsLeft" type="Label" parent="."]
-offset_left = 46.0
-offset_top = 168.0
-offset_right = 186.0
-offset_bottom = 251.0
+offset_left = 45.0
+offset_top = 100.0
+offset_right = 185.0
+offset_bottom = 183.0
 
 [node name="PackageSpawner" type="Node2D" parent="."]
 script = ExtResource("8_aixl6")
