@@ -1,4 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://bc4rmsxrekb44"]
+
+[gd_scene load_steps=9 format=3 uid="uid://bc4rmsxrekb44"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_nj0kv"]
 [ext_resource type="PackedScene" uid="uid://du5daq5unqrt7" path="res://background/background.tscn" id="2_05ike"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dq32yttt5pqel" path="res://package.tscn" id="5_dickx"]
 [ext_resource type="PackedScene" uid="uid://d0agi2omt3r03" path="res://bot.tscn" id="6_jh3pm"]
 [ext_resource type="PackedScene" uid="uid://bgkit0ce8qjw8" path="res://collectArea/collectArea.tscn" id="7_vus8b"]
+[ext_resource type="Script" path="res://PackageSpawner.gd" id="4_poox6"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nj0kv")
@@ -32,6 +34,12 @@ position = Vector2(-171, 406)
 
 [node name="collectAreaRight" parent="." instance=ExtResource("7_vus8b")]
 position = Vector2(2029, 403)
+
+[node name="PackageSpawner" type="Node2D" parent="."]
+script = ExtResource("4_poox6")
+Package = ExtResource("2_q1knv")
+
+[node name="Timer" type="Timer" parent="PackageSpawner"]
 
 [node name="PointsLeft" type="Label" parent="."]
 offset_left = 46.0
