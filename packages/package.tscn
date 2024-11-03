@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dq32yttt5pqel"]
 
-[ext_resource type="Script" path="res://Package.gd" id="1_snlk7"]
-[ext_resource type="Texture2D" uid="uid://ddt0u8atu1fun" path="res://packages/Kiste32x32final.png" id="2_kcrur"]
+[ext_resource type="Script" path="res://packages/Package.gd" id="1_sdsrn"]
+[ext_resource type="Texture2D" uid="uid://ddt0u8atu1fun" path="res://packages/Kiste32x32final.png" id="2_c17py"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvxwd"]
 friction = 4.0
@@ -15,9 +15,9 @@ size = Vector2(86, 86)
 [node name="Package" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 2
-mass = 4.0
+mass = 100.0
 physics_material_override = SubResource("PhysicsMaterial_gvxwd")
-script = ExtResource("1_snlk7")
+script = ExtResource("1_sdsrn")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -33,7 +33,7 @@ shape = SubResource("RectangleShape2D_nlndr")
 texture_filter = 3
 position = Vector2(6, 10)
 scale = Vector2(2.6875, 2.6875)
-texture = ExtResource("2_kcrur")
+texture = ExtResource("2_c17py")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(6, 9.99986)
