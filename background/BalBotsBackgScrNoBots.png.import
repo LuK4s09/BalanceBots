@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://580ouq0obqri"
-path="res://.godot/imported/crate.png-b83caf405963e4d199b63b1a11f14613.ctex"
+uid="uid://c6gxgo56as047"
+path="res://.godot/imported/BalBotsBackgScrNoBots.png-fbf265ba7276e4d10470cba72a7c8fb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://crate.png"
-dest_files=["res://.godot/imported/crate.png-b83caf405963e4d199b63b1a11f14613.ctex"]
+source_file="res://background/BalBotsBackgScrNoBots.png"
+dest_files=["res://.godot/imported/BalBotsBackgScrNoBots.png-fbf265ba7276e4d10470cba72a7c8fb1.ctex"]
 
 [params]
 

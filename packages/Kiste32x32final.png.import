@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do087k2x3yvg6"
-path="res://.godot/imported/illuminatingDisplayPressE.png-d337dcd9e0ce04b4115ad100b637431e.ctex"
+uid="uid://ddt0u8atu1fun"
+path="res://.godot/imported/Kiste32x32final.png-669a638eeb0681a4a2c2796c5a6bf402.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://illuminatingDisplayPressE.png"
-dest_files=["res://.godot/imported/illuminatingDisplayPressE.png-d337dcd9e0ce04b4115ad100b637431e.ctex"]
+source_file="res://packages/Kiste32x32final.png"
+dest_files=["res://.godot/imported/Kiste32x32final.png-669a638eeb0681a4a2c2796c5a6bf402.ctex"]
 
 [params]
 

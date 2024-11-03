@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6gxgo56as047"
-path="res://.godot/imported/BalBotsBackgScrNoBots.png-5eeaa892ca6df6e850dd07bb53ef4e71.ctex"
+uid="uid://do087k2x3yvg6"
+path="res://.godot/imported/illuminatingDisplayPressE.png-c726372b563240cb080b48d6bba4a764.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BalBotsBackgScrNoBots.png"
-dest_files=["res://.godot/imported/BalBotsBackgScrNoBots.png-5eeaa892ca6df6e850dd07bb53ef4e71.ctex"]
+source_file="res://background/illuminatingDisplayPressE.png"
+dest_files=["res://.godot/imported/illuminatingDisplayPressE.png-c726372b563240cb080b48d6bba4a764.ctex"]
 
 [params]
 

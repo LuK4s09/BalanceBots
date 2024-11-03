@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhmlvnmni1n1t"
-path="res://.godot/imported/Kiste32x32.png-3510300887029758f65534af0824d280.ctex"
+uid="uid://cn42f2ixmamav"
+path="res://.godot/imported/botWip1.png-9efe205996ffaac2e887b301b3c925e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Kiste32x32.png"
-dest_files=["res://.godot/imported/Kiste32x32.png-3510300887029758f65534af0824d280.ctex"]
+source_file="res://bots/botWip1.png"
+dest_files=["res://.godot/imported/botWip1.png-9efe205996ffaac2e887b301b3c925e5.ctex"]
 
 [params]
 

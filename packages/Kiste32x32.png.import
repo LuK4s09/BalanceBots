@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddt0u8atu1fun"
-path="res://.godot/imported/Kiste32x32final.png-176b615f83c27f1dbece478266b03108.ctex"
+uid="uid://bhmlvnmni1n1t"
+path="res://.godot/imported/Kiste32x32.png-a4daaa5d95da7514ea6a29fd12562415.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Kiste32x32final.png"
-dest_files=["res://.godot/imported/Kiste32x32final.png-176b615f83c27f1dbece478266b03108.ctex"]
+source_file="res://packages/Kiste32x32.png"
+dest_files=["res://.godot/imported/Kiste32x32.png-a4daaa5d95da7514ea6a29fd12562415.ctex"]
 
 [params]
 
