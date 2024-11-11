@@ -46,6 +46,11 @@ autostart = true
 
 [node name="Bots" parent="." instance=ExtResource("8_t5wmp")]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(982, 510)
+enabled = false
+zoom = Vector2(0.5, 0.5)
+
 [connection signal="area_entered" from="collectAreaLeft" to="Package" method="_on_collect_area_left_area_entered"]
 [connection signal="area_entered" from="collectAreaRight" to="Package" method="_on_collect_area_right_area_entered"]
 [connection signal="timeout" from="PackageSpawner/Timer" to="PackageSpawner" method="_on_timer_timeout"]
