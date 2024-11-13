@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b406w4ii8jjdb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fj0gi"]
-size = Vector2(21.875, 374.016)
+size = Vector2(21.875, 666)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sfm8i"]
 size = Vector2(20, 412.625)
@@ -16,11 +16,11 @@ size = Vector2(9, 293)
 metadata/_edit_lock_ = true
 
 [node name="wallLeft1" type="CollisionShape2D" parent="."]
-position = Vector2(-10.875, 186.992)
+position = Vector2(-10.875, 41)
 shape = SubResource("RectangleShape2D_fj0gi")
 
 [node name="wallRight1" type="CollisionShape2D" parent="."]
-position = Vector2(1931, 188)
+position = Vector2(1931, 41)
 shape = SubResource("RectangleShape2D_fj0gi")
 
 [node name="wallLeft2" type="CollisionShape2D" parent="."]
