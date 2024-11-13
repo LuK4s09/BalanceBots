@@ -1,29 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc4rmsxrekb44"]
+[gd_scene load_steps=5 format=3 uid="uid://bc4rmsxrekb44"]
 
-[ext_resource type="PackedScene" uid="uid://du5daq5unqrt7" path="res://background/background.tscn" id="2_nklr3"]
-[ext_resource type="PackedScene" uid="uid://b406w4ii8jjdb" path="res://background/wallsLeftAndRight.tscn" id="3_1n7b4"]
-[ext_resource type="PackedScene" uid="uid://ekbs57d66xm6" path="res://background/wallsTopAndBottom.tscn" id="4_1oos7"]
-[ext_resource type="PackedScene" uid="uid://bgkit0ce8qjw8" path="res://collectArea/collectArea.tscn" id="7_ncfhi"]
+[ext_resource type="PackedScene" uid="uid://ckhem5qfoq20y" path="res://arena.tscn" id="3_df62l"]
+[ext_resource type="PackedScene" uid="uid://k8e8n83d6aps" path="res://game_loop_controller.tscn" id="4_oqwls"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
 [ext_resource type="PackedScene" uid="uid://bsh2ph6ky6bg2" path="res://bots/bot.tscn" id="9_erbm1"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Background" parent="." instance=ExtResource("2_nklr3")]
-position = Vector2(-7, -34)
-
-[node name="wallsLeftAndRight" parent="." instance=ExtResource("3_1n7b4")]
-collision_layer = 3
-collision_mask = 3
-
-[node name="wallsTopAndBottom" parent="." instance=ExtResource("4_1oos7")]
-position = Vector2(7, 3)
-
-[node name="collectAreaLeft" parent="." instance=ExtResource("7_ncfhi")]
-position = Vector2(-171, 406)
-
-[node name="collectAreaRight" parent="." instance=ExtResource("7_ncfhi")]
-position = Vector2(2029, 403)
+[node name="Arena" parent="." instance=ExtResource("3_df62l")]
 
 [node name="PointsLeft" type="Label" parent="."]
 offset_left = 46.0
@@ -49,5 +33,7 @@ position = Vector2(619, 778)
 [node name="Player2" parent="." instance=ExtResource("9_erbm1")]
 position = Vector2(1275, 784)
 PlayerNumber = 1
+
+[node name="GameLoopController" parent="." instance=ExtResource("4_oqwls")]
 
 [connection signal="timeout" from="PackageSpawner/Timer" to="PackageSpawner" method="_on_timer_timeout"]
