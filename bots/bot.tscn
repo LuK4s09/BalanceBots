@@ -1,21 +1,21 @@
-[gd_scene load_steps=11 format=3 uid="uid://d0agi2omt3r03"]
+[gd_scene load_steps=11 format=3 uid="uid://bsh2ph6ky6bg2"]
 
-[ext_resource type="Script" path="res://bots/Bot.gd" id="1_oi7yq"]
-[ext_resource type="Texture2D" uid="uid://bokn3uwye25le" path="res://bots/Player1LookRight.png" id="3_gep8u"]
-[ext_resource type="Texture2D" uid="uid://b7ciacg3xmxsd" path="res://bots/Player1LookLeft.png" id="4_at6d3"]
+[ext_resource type="Script" path="res://bots/Bot.gd" id="1_nh0n2"]
+[ext_resource type="Texture2D" uid="uid://bokn3uwye25le" path="res://bots/Player1LookRight.png" id="2_jdjpt"]
+[ext_resource type="Texture2D" uid="uid://b7ciacg3xmxsd" path="res://bots/Player1LookLeft.png" id="3_pjdms"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ir0q"]
 size = Vector2(255, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1p4ta"]
-atlas = ExtResource("3_gep8u")
+atlas = ExtResource("2_jdjpt")
 region = Rect2(0, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r0r1a"]
-atlas = ExtResource("3_gep8u")
+atlas = ExtResource("2_jdjpt")
 region = Rect2(64, 0, 64, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_x8thq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_68sal"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -30,14 +30,14 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4rye2"]
-atlas = ExtResource("4_at6d3")
+atlas = ExtResource("3_pjdms")
 region = Rect2(0, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jy8k3"]
-atlas = ExtResource("4_at6d3")
+atlas = ExtResource("3_pjdms")
 region = Rect2(64, 0, 64, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_dg8iv"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1jvn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -52,30 +52,45 @@ animations = [{
 }]
 
 [node name="Bot" type="CharacterBody2D"]
-position = Vector2(921, 960)
 collision_layer = 3
-motion_mode = 1
-platform_on_leave = 1
-script = ExtResource("1_oi7yq")
+script = ExtResource("1_nh0n2")
 
-[node name="BotCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-70.5, -4.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_1ir0q")
-metadata/_edit_lock_ = true
 
-[node name="Bot1LookRight" type="AnimatedSprite2D" parent="."]
+[node name="Player1LookRight" type="AnimatedSprite2D" parent="."]
 texture_filter = 3
-position = Vector2(-70, 48)
+position = Vector2(0, 53)
 scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_x8thq")
+sprite_frames = SubResource("SpriteFrames_68sal")
 autoplay = "default"
 metadata/_edit_lock_ = true
 
-[node name="Bot1LookLeft" type="AnimatedSprite2D" parent="."]
+[node name="Player1LookLeft" type="AnimatedSprite2D" parent="."]
 visible = false
 texture_filter = 3
-position = Vector2(-70, 48)
+position = Vector2(0, 53)
 scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_dg8iv")
+sprite_frames = SubResource("SpriteFrames_t1jvn")
+autoplay = "default"
+metadata/_edit_lock_ = true
+
+[node name="Player2LookRight" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(0.858824, 0.964706, 0.00392157, 1)
+texture_filter = 3
+position = Vector2(0, 53)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_68sal")
+autoplay = "default"
+metadata/_edit_lock_ = true
+
+[node name="Player2LookLeft" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(0.858824, 0.964706, 0.00392157, 1)
+texture_filter = 3
+position = Vector2(0, 53)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_t1jvn")
 autoplay = "default"
 metadata/_edit_lock_ = true

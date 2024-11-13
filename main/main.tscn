@@ -1,18 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://bc4rmsxrekb44"]
+[gd_scene load_steps=8 format=3 uid="uid://bc4rmsxrekb44"]
 
-[ext_resource type="Script" path="res://main/main.gd" id="1_ug12j"]
 [ext_resource type="PackedScene" uid="uid://du5daq5unqrt7" path="res://background/background.tscn" id="2_nklr3"]
 [ext_resource type="PackedScene" uid="uid://b406w4ii8jjdb" path="res://background/wallsLeftAndRight.tscn" id="3_1n7b4"]
 [ext_resource type="PackedScene" uid="uid://ekbs57d66xm6" path="res://background/wallsTopAndBottom.tscn" id="4_1oos7"]
 [ext_resource type="PackedScene" uid="uid://dq32yttt5pqel" path="res://packages/package.tscn" id="5_pqphi"]
-[ext_resource type="PackedScene" uid="uid://d0agi2omt3r03" path="res://bots/bot.tscn" id="6_i7mc8"]
 [ext_resource type="PackedScene" uid="uid://bgkit0ce8qjw8" path="res://collectArea/collectArea.tscn" id="7_ncfhi"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
-[ext_resource type="PackedScene" uid="uid://iyjybyosc7dg" path="res://bots/bot2.tscn" id="9_b7051"]
-[ext_resource type="Script" path="res://bots/bot2.gd" id="10_lwna8"]
+[ext_resource type="PackedScene" uid="uid://bsh2ph6ky6bg2" path="res://bots/bot.tscn" id="9_erbm1"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_ug12j")
 
 [node name="Background" parent="." instance=ExtResource("2_nklr3")]
 position = Vector2(-7, -34)
@@ -46,14 +42,17 @@ script = ExtResource("8_aixl6")
 wait_time = 2.0
 autostart = true
 
-[node name="Bots" type="Node2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(982, 510)
+enabled = false
+zoom = Vector2(0.5, 0.5)
 
-[node name="Bot" parent="Bots" instance=ExtResource("6_i7mc8")]
-position = Vector2(823, 624)
+[node name="Player1" parent="." instance=ExtResource("9_erbm1")]
+position = Vector2(619, 778)
 
-[node name="Bot2" parent="Bots" instance=ExtResource("9_b7051")]
-position = Vector2(1381, 655)
-script = ExtResource("10_lwna8")
+[node name="Player2" parent="." instance=ExtResource("9_erbm1")]
+position = Vector2(1275, 784)
+PlayerNumber = 1
 
 [connection signal="area_entered" from="collectAreaLeft" to="Package" method="_on_collect_area_left_area_entered"]
 [connection signal="area_entered" from="collectAreaRight" to="Package" method="_on_collect_area_right_area_entered"]
