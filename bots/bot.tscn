@@ -1,0 +1,96 @@
+[gd_scene load_steps=11 format=3 uid="uid://bsh2ph6ky6bg2"]
+
+[ext_resource type="Script" path="res://bots/Bot.gd" id="1_nh0n2"]
+[ext_resource type="Texture2D" uid="uid://bokn3uwye25le" path="res://bots/Player1LookRight.png" id="2_jdjpt"]
+[ext_resource type="Texture2D" uid="uid://b7ciacg3xmxsd" path="res://bots/Player1LookLeft.png" id="3_pjdms"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ir0q"]
+size = Vector2(255, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1p4ta"]
+atlas = ExtResource("2_jdjpt")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0r1a"]
+atlas = ExtResource("2_jdjpt")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_68sal"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1p4ta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0r1a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rye2"]
+atlas = ExtResource("3_pjdms")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jy8k3"]
+atlas = ExtResource("3_pjdms")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1jvn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rye2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jy8k3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bot" type="CharacterBody2D"]
+collision_layer = 3
+script = ExtResource("1_nh0n2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1ir0q")
+
+[node name="Player1LookRight" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(0, 53)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_68sal")
+autoplay = "default"
+metadata/_edit_lock_ = true
+
+[node name="Player1LookLeft" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 3
+position = Vector2(0, 53)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_t1jvn")
+autoplay = "default"
+metadata/_edit_lock_ = true
+
+[node name="Player2LookRight" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(0.858824, 0.964706, 0.00392157, 1)
+texture_filter = 3
+position = Vector2(0, 53)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_68sal")
+autoplay = "default"
+metadata/_edit_lock_ = true
+
+[node name="Player2LookLeft" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(0.858824, 0.964706, 0.00392157, 1)
+texture_filter = 3
+position = Vector2(0, 53)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_t1jvn")
+autoplay = "default"
+metadata/_edit_lock_ = true
