@@ -7,7 +7,7 @@ var SPEED = 650.0
 #var min_y_position = 970
 
 func get_input():
-	var input_direction = Input.get_vector("Player1_left", "Player1_right", "Player1_up", "Player1_down")
+	var input_direction = Input.get_vector("Player2_left", "Player2_right", "Player2_up", "Player2_down")
 	velocity = input_direction * SPEED
 	if velocity.x > 0 :
 		Bot1LookLeft.hide()
