@@ -1,15 +1,15 @@
 [gd_scene load_steps=6 format=3 uid="uid://dq32yttt5pqel"]
 
 [ext_resource type="Script" path="res://packages/Package.gd" id="1_sdsrn"]
-[ext_resource type="Texture2D" uid="uid://ddt0u8atu1fun" path="res://packages/Kiste32x32final.png" id="2_c17py"]
+[ext_resource type="Texture2D" uid="uid://cq8pe0uiakttk" path="res://packages/Kiste - Kopie.png" id="2_fx02x"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvxwd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nktsj"]
-size = Vector2(86, 86)
+size = Vector2(64, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlndr"]
-size = Vector2(86, 86)
+size = Vector2(76, 76)
 
 [node name="Package" type="RigidBody2D"]
 collision_layer = 2
@@ -21,21 +21,20 @@ script = ExtResource("1_sdsrn")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(6, 10)
+scale = Vector2(1.2, 1.2)
 shape = SubResource("RectangleShape2D_nktsj")
 
 [node name="BigPackage" type="CollisionShape2D" parent="."]
-position = Vector2(6, 10)
 shape = SubResource("RectangleShape2D_nlndr")
 
 [node name="Kiste32x32" type="Sprite2D" parent="."]
 texture_filter = 3
-position = Vector2(6, 10)
-scale = Vector2(2.6875, 2.6875)
-texture = ExtResource("2_c17py")
+position = Vector2(1.90735e-06, -1.90735e-06)
+scale = Vector2(4.75, 4.75)
+texture = ExtResource("2_fx02x")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(6, 9.99986)
-scale = Vector2(4.3, 4.3)
+position = Vector2(-0.499999, -0.500002)
+scale = Vector2(3.85, 3.85)
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

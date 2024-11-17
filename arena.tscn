@@ -8,7 +8,6 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Background" parent="." instance=ExtResource("1_q3thq")]
-position = Vector2(-7, -34)
 
 [node name="wallsLeftAndRight" parent="." instance=ExtResource("2_0m6pl")]
 collision_layer = 3
