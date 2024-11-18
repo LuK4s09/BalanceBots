@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckhem5qfoq20y"]
+
+[ext_resource type="PackedScene" uid="uid://du5daq5unqrt7" path="res://background/background.tscn" id="1_q3thq"]
+[ext_resource type="PackedScene" uid="uid://b406w4ii8jjdb" path="res://background/wallsLeftAndRight.tscn" id="2_0m6pl"]
+[ext_resource type="PackedScene" uid="uid://ekbs57d66xm6" path="res://background/wallsTopAndBottom.tscn" id="3_bpyai"]
+[ext_resource type="PackedScene" uid="uid://bgkit0ce8qjw8" path="res://collectArea/collectArea.tscn" id="4_wv821"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_q3thq")]
+
+[node name="wallsLeftAndRight" parent="." instance=ExtResource("2_0m6pl")]
+collision_layer = 3
+collision_mask = 3
+
+[node name="wallsTopAndBottom" parent="." instance=ExtResource("3_bpyai")]
+position = Vector2(7, 3)
+
+[node name="collectAreaLeft" parent="." instance=ExtResource("4_wv821")]
+position = Vector2(-171, 406)
+
+[node name="collectAreaRight" parent="." instance=ExtResource("4_wv821")]
+position = Vector2(2029, 403)

@@ -1,40 +1,47 @@
-[gd_scene load_steps=8 format=3 uid="uid://bc4rmsxrekb44"]
+[gd_scene load_steps=6 format=3 uid="uid://bc4rmsxrekb44"]
 
-[ext_resource type="PackedScene" uid="uid://du5daq5unqrt7" path="res://background/background.tscn" id="2_nklr3"]
-[ext_resource type="PackedScene" uid="uid://b406w4ii8jjdb" path="res://background/wallsLeftAndRight.tscn" id="3_1n7b4"]
-[ext_resource type="PackedScene" uid="uid://ekbs57d66xm6" path="res://background/wallsTopAndBottom.tscn" id="4_1oos7"]
-[ext_resource type="PackedScene" uid="uid://dq32yttt5pqel" path="res://packages/package.tscn" id="5_pqphi"]
-[ext_resource type="PackedScene" uid="uid://bgkit0ce8qjw8" path="res://collectArea/collectArea.tscn" id="7_ncfhi"]
+[ext_resource type="Script" path="res://GameLoopController.gd" id="1_vbj8m"]
+[ext_resource type="PackedScene" uid="uid://ckhem5qfoq20y" path="res://arena.tscn" id="3_df62l"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
 [ext_resource type="PackedScene" uid="uid://bsh2ph6ky6bg2" path="res://bots/bot.tscn" id="9_erbm1"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_m7l7f"]
+font_size = 50
+
 [node name="Main" type="Node2D"]
 
-[node name="Background" parent="." instance=ExtResource("2_nklr3")]
-position = Vector2(-7, -34)
+[node name="GameLoopController" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vbj8m")
 
-[node name="wallsLeftAndRight" parent="." instance=ExtResource("3_1n7b4")]
-collision_layer = 3
-collision_mask = 3
+[node name="Timer" type="Timer" parent="GameLoopController"]
+autostart = true
 
-[node name="wallsTopAndBottom" parent="." instance=ExtResource("4_1oos7")]
-position = Vector2(7, 3)
+[node name="PointsLeft" type="Label" parent="GameLoopController"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 122.0
+offset_right = 264.0
+offset_bottom = 326.0
 
-[node name="Package" parent="." instance=ExtResource("5_pqphi")]
-position = Vector2(650, -89)
-mass = 2500.0
+[node name="PointsRight" type="Label" parent="GameLoopController"]
+layout_mode = 0
+offset_left = 1657.0
+offset_top = 121.0
+offset_right = 1797.0
+offset_bottom = 325.0
 
-[node name="collectAreaLeft" parent="." instance=ExtResource("7_ncfhi")]
-position = Vector2(-171, 406)
-
-[node name="collectAreaRight" parent="." instance=ExtResource("7_ncfhi")]
-position = Vector2(2029, 403)
-
-[node name="PointsLeft" type="Label" parent="."]
-offset_left = 45.0
-offset_top = 100.0
-offset_right = 185.0
-offset_bottom = 183.0
+[node name="TimerLabel" type="Label" parent="GameLoopController"]
+top_level = true
+layout_mode = 0
+offset_left = 878.0
+offset_top = 178.0
+offset_right = 1072.0
+offset_bottom = 259.0
+text = "60"
+label_settings = SubResource("LabelSettings_m7l7f")
+horizontal_alignment = 1
 
 [node name="PackageSpawner" type="Node2D" parent="."]
 script = ExtResource("8_aixl6")
@@ -43,10 +50,7 @@ script = ExtResource("8_aixl6")
 wait_time = 2.0
 autostart = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(982, 510)
-enabled = false
-zoom = Vector2(0.5, 0.5)
+[node name="Arena" parent="." instance=ExtResource("3_df62l")]
 
 [node name="Player1" parent="." instance=ExtResource("9_erbm1")]
 position = Vector2(619, 778)
@@ -55,6 +59,10 @@ position = Vector2(619, 778)
 position = Vector2(1275, 784)
 PlayerNumber = 1
 
-[connection signal="area_entered" from="collectAreaLeft" to="Package" method="_on_collect_area_left_area_entered"]
-[connection signal="area_entered" from="collectAreaRight" to="Package" method="_on_collect_area_right_area_entered"]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(982, 510)
+enabled = false
+zoom = Vector2(0.5, 0.5)
+
+[connection signal="timeout" from="GameLoopController/Timer" to="GameLoopController" method="_on_timer_timeout"]
 [connection signal="timeout" from="PackageSpawner/Timer" to="PackageSpawner" method="_on_timer_timeout"]
