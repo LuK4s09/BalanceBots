@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" path="res://GameLoopController.gd" id="1_hlcou"]
 
-[node name="GameLoopController" type="Node2D"]
+[node name="GameLoopController" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_hlcou")
 
 [node name="Timer" type="Timer" parent="."]
