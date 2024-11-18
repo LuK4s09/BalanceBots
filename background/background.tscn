@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://du5daq5unqrt7"]
 
-[ext_resource type="Texture2D" uid="uid://drvfgdh4sh8kx" path="res://background/Background.png" id="1_cttix"]
+[ext_resource type="Texture2D" uid="uid://4wvfeqqaecpq" path="res://background/Background.png" id="1_cttix"]
 [ext_resource type="Texture2D" uid="uid://do087k2x3yvg6" path="res://background/illuminatingDisplayPressE.png" id="2_u32kl"]
 
 [node name="Background" type="Node2D"]
