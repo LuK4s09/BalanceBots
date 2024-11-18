@@ -22,6 +22,7 @@ position = Vector2(7, 3)
 
 [node name="Package" parent="." instance=ExtResource("5_pqphi")]
 position = Vector2(650, -89)
+mass = 2500.0
 
 [node name="collectAreaLeft" parent="." instance=ExtResource("7_ncfhi")]
 position = Vector2(-171, 406)
