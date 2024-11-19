@@ -17,7 +17,7 @@ collision_mask = 3
 position = Vector2(4, 47)
 
 [node name="collectAreaLeft" parent="." instance=ExtResource("4_wv821")]
-position = Vector2(-171, 406)
+position = Vector2(-290, 343)
 
 [node name="collectAreaRight" parent="." instance=ExtResource("4_wv821")]
-position = Vector2(2029, 403)
+position = Vector2(1931, 353)

@@ -4,51 +4,51 @@
 size = Vector2(21.875, 666)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sfm8i"]
-size = Vector2(20, 412.625)
+size = Vector2(22, 412.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cxqy"]
-size = Vector2(238.25, 20)
+size = Vector2(420, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8umj"]
-size = Vector2(9, 293)
+size = Vector2(9, 314.5)
 
 [node name="wallsLeftAndRight" type="StaticBody2D"]
 metadata/_edit_lock_ = true
 
 [node name="wallLeft1" type="CollisionShape2D" parent="."]
-position = Vector2(-10.875, 41)
+position = Vector2(69, 35)
 shape = SubResource("RectangleShape2D_fj0gi")
 
 [node name="wallRight1" type="CollisionShape2D" parent="."]
-position = Vector2(1931, 41)
+position = Vector2(1851, 35)
 shape = SubResource("RectangleShape2D_fj0gi")
 
 [node name="wallLeft2" type="CollisionShape2D" parent="."]
-position = Vector2(-10, 873.625)
+position = Vector2(69, 887)
 shape = SubResource("RectangleShape2D_sfm8i")
 
 [node name="wallRight2" type="CollisionShape2D" parent="."]
-position = Vector2(1931, 873.313)
+position = Vector2(1851, 914)
 shape = SubResource("RectangleShape2D_sfm8i")
 
 [node name="wallGateLeftTop" type="CollisionShape2D" parent="."]
-position = Vector2(-140.75, 364)
+position = Vector2(-130, 348)
 shape = SubResource("RectangleShape2D_8cxqy")
 
 [node name="wallGateLeftBottom" type="CollisionShape2D" parent="."]
-position = Vector2(-139, 677)
+position = Vector2(-48, 690)
 shape = SubResource("RectangleShape2D_8cxqy")
 
 [node name="wallGateLeftWall" type="CollisionShape2D" parent="."]
-position = Vector2(-255.5, 520.5)
+position = Vector2(-254, 523.75)
 shape = SubResource("RectangleShape2D_n8umj")
 
 [node name="wallGateRightTop" type="CollisionShape2D" parent="."]
-position = Vector2(2061, 365)
+position = Vector2(2050, 348)
 shape = SubResource("RectangleShape2D_8cxqy")
 
 [node name="wallGateRightBottom" type="CollisionShape2D" parent="."]
-position = Vector2(2060, 677)
+position = Vector2(1968, 690)
 shape = SubResource("RectangleShape2D_8cxqy")
 
 [node name="wallGateRightWall" type="CollisionShape2D" parent="."]
