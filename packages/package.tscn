@@ -31,9 +31,3 @@ texture_filter = 3
 position = Vector2(1.90735e-06, -1.90735e-06)
 scale = Vector2(4.75, 4.75)
 texture = ExtResource("2_fx02x")
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-0.499999, -0.500002)
-scale = Vector2(3.85, 3.85)
-
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

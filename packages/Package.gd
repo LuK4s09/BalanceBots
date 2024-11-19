@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+class_name package
+
 @onready var displayPointsLeft = $"./PointsLeft"
 @onready var displayPointsRight = $"./PointsRight"
 
@@ -14,11 +16,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	despawn_if_below_area()
 
-
-func _on_visible_on_screen_notifier_2d_screen_exited():
-	queue_free()
+func despawn_if_below_area():
+	if position.y > 1200:
+		queue_free()
 
 
 func _on_collect_area_left_area_entered(area):
