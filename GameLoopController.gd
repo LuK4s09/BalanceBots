@@ -1,6 +1,6 @@
 extends Node
 
-var time_left: int = 6 # Lenght of one game
+var time_left: int = 60 # Lenght of one game
 
 @onready var TimerLabel = $TimerLabel
 

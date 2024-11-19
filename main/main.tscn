@@ -12,6 +12,9 @@
 font_size = 50
 
 [node name="Main" type="Node2D"]
+metadata/_edit_vertical_guides_ = [1920.0, 1970.0]
+
+[node name="Arena" parent="." instance=ExtResource("3_df62l")]
 
 [node name="PointCounter" type="Control" parent="."]
 layout_mode = 3
@@ -23,12 +26,12 @@ offset_bottom = 550.0
 script = ExtResource("1_neoe5")
 
 [node name="collectAreaLeftSide" parent="PointCounter" instance=ExtResource("2_vrhs0")]
-position = Vector2(-1264, -180)
+position = Vector2(-1313, -181)
 collision_layer = 2
 collision_mask = 2
 
 [node name="collectAreaRightSide" parent="PointCounter" instance=ExtResource("2_vrhs0")]
-position = Vector2(942, -186)
+position = Vector2(989, -186)
 collision_layer = 2
 collision_mask = 2
 
@@ -96,8 +99,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "60"
 label_settings = SubResource("LabelSettings_m7l7f")
 horizontal_alignment = 1
-
-[node name="Arena" parent="." instance=ExtResource("3_df62l")]
 
 [node name="PackageSpawner" type="Node2D" parent="."]
 script = ExtResource("8_aixl6")
