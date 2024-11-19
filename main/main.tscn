@@ -66,6 +66,7 @@ theme_override_font_sizes/font_size = 96
 text = "000"
 
 [node name="TimerLabel" type="Label" parent="GameLoopController"]
+modulate = Color(0.458824, 0.854902, 0.976471, 1)
 top_level = true
 layout_mode = 0
 offset_left = 878.0
