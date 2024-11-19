@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b406w4ii8jjdb"]
+[gd_scene load_steps=6 format=3 uid="uid://b406w4ii8jjdb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fj0gi"]
 size = Vector2(21.875, 666)
@@ -12,6 +12,9 @@ size = Vector2(420, 40)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8umj"]
 size = Vector2(9, 314.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mhyb"]
+size = Vector2(320, 156)
+
 [node name="wallsLeftAndRight" type="StaticBody2D"]
 metadata/_edit_lock_ = true
 
@@ -24,7 +27,7 @@ position = Vector2(1851, 35)
 shape = SubResource("RectangleShape2D_fj0gi")
 
 [node name="wallLeft2" type="CollisionShape2D" parent="."]
-position = Vector2(69, 887)
+position = Vector2(69, 909)
 shape = SubResource("RectangleShape2D_sfm8i")
 
 [node name="wallRight2" type="CollisionShape2D" parent="."]
@@ -54,3 +57,11 @@ shape = SubResource("RectangleShape2D_8cxqy")
 [node name="wallGateRightWall" type="CollisionShape2D" parent="."]
 position = Vector2(2176, 521)
 shape = SubResource("RectangleShape2D_n8umj")
+
+[node name="ceilingLeft" type="CollisionShape2D" parent="."]
+position = Vector2(218, 10)
+shape = SubResource("RectangleShape2D_4mhyb")
+
+[node name="ceilingRight" type="CollisionShape2D" parent="."]
+position = Vector2(1702, 10)
+shape = SubResource("RectangleShape2D_4mhyb")
