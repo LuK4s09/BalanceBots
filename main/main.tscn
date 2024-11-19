@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc4rmsxrekb44"]
+[gd_scene load_steps=9 format=3 uid="uid://bc4rmsxrekb44"]
 
+[ext_resource type="Script" path="res://main/PointCounter.gd" id="1_neoe5"]
 [ext_resource type="Script" path="res://GameLoopController.gd" id="1_vbj8m"]
+[ext_resource type="PackedScene" uid="uid://bgkit0ce8qjw8" path="res://collectArea/collectArea.tscn" id="2_vrhs0"]
 [ext_resource type="PackedScene" uid="uid://ckhem5qfoq20y" path="res://arena.tscn" id="3_df62l"]
 [ext_resource type="FontFile" uid="uid://di1woau083u0p" path="res://digital-7.ttf" id="3_yl1s7"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
@@ -11,7 +13,24 @@ font_size = 50
 
 [node name="Main" type="Node2D"]
 
-[node name="Arena" parent="." instance=ExtResource("3_df62l")]
+[node name="PointCounter" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 982.0
+offset_top = 510.0
+offset_right = 1022.0
+offset_bottom = 550.0
+script = ExtResource("1_neoe5")
+
+[node name="collectAreaLeftSide" parent="PointCounter" instance=ExtResource("2_vrhs0")]
+position = Vector2(-1264, -180)
+collision_layer = 2
+collision_mask = 2
+
+[node name="collectAreaRightSide" parent="PointCounter" instance=ExtResource("2_vrhs0")]
+position = Vector2(942, -186)
+collision_layer = 2
+collision_mask = 2
 
 [node name="GameLoopController" type="Control" parent="."]
 layout_mode = 3
@@ -78,6 +97,8 @@ text = "60"
 label_settings = SubResource("LabelSettings_m7l7f")
 horizontal_alignment = 1
 
+[node name="Arena" parent="." instance=ExtResource("3_df62l")]
+
 [node name="PackageSpawner" type="Node2D" parent="."]
 script = ExtResource("8_aixl6")
 
@@ -97,5 +118,7 @@ position = Vector2(982, 510)
 enabled = false
 zoom = Vector2(0.5, 0.5)
 
+[connection signal="body_entered" from="PointCounter/collectAreaLeftSide" to="PointCounter" method="_on_collect_area_left_side_body_entered"]
+[connection signal="body_entered" from="PointCounter/collectAreaRightSide" to="PointCounter" method="_on_collect_area_right_side_body_entered"]
 [connection signal="timeout" from="GameLoopController/Timer" to="GameLoopController" method="_on_timer_timeout"]
 [connection signal="timeout" from="PackageSpawner/Timer" to="PackageSpawner" method="_on_timer_timeout"]
