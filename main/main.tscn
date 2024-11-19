@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc4rmsxrekb44"]
+[gd_scene load_steps=7 format=3 uid="uid://bc4rmsxrekb44"]
 
 [ext_resource type="Script" path="res://GameLoopController.gd" id="1_vbj8m"]
 [ext_resource type="PackedScene" uid="uid://ckhem5qfoq20y" path="res://arena.tscn" id="3_df62l"]
+[ext_resource type="FontFile" uid="uid://di1woau083u0p" path="res://digital-7.ttf" id="3_yl1s7"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
 [ext_resource type="PackedScene" uid="uid://bsh2ph6ky6bg2" path="res://bots/bot.tscn" id="9_erbm1"]
 
@@ -9,6 +10,8 @@
 font_size = 50
 
 [node name="Main" type="Node2D"]
+
+[node name="Arena" parent="." instance=ExtResource("3_df62l")]
 
 [node name="GameLoopController" type="Control" parent="."]
 layout_mode = 3
@@ -18,19 +21,49 @@ script = ExtResource("1_vbj8m")
 [node name="Timer" type="Timer" parent="GameLoopController"]
 autostart = true
 
+[node name="DisplayScoreLeft" type="Label" parent="GameLoopController"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 120.0
+offset_right = 262.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0.388235, 0.862745, 0.984314, 1)
+theme_override_fonts/font = ExtResource("3_yl1s7")
+theme_override_font_sizes/font_size = 55
+text = "Score:"
+
 [node name="PointsLeft" type="Label" parent="GameLoopController"]
 layout_mode = 0
 offset_left = 124.0
-offset_top = 122.0
+offset_top = 175.0
 offset_right = 264.0
-offset_bottom = 326.0
+offset_bottom = 274.0
+theme_override_colors/font_color = Color(0.388235, 0.862745, 0.984314, 1)
+theme_override_fonts/font = ExtResource("3_yl1s7")
+theme_override_font_sizes/font_size = 96
+text = "008"
+
+[node name="DisplayScoreRight" type="Label" parent="GameLoopController"]
+layout_mode = 0
+offset_left = 1657.0
+offset_top = 121.0
+offset_right = 1697.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0.984314, 0.815686, 0.443137, 1)
+theme_override_fonts/font = ExtResource("3_yl1s7")
+theme_override_font_sizes/font_size = 55
+text = "Score:"
 
 [node name="PointsRight" type="Label" parent="GameLoopController"]
 layout_mode = 0
 offset_left = 1657.0
-offset_top = 121.0
+offset_top = 175.0
 offset_right = 1797.0
-offset_bottom = 325.0
+offset_bottom = 274.0
+theme_override_colors/font_color = Color(0.984314, 0.815686, 0.443137, 1)
+theme_override_fonts/font = ExtResource("3_yl1s7")
+theme_override_font_sizes/font_size = 96
+text = "000"
 
 [node name="TimerLabel" type="Label" parent="GameLoopController"]
 top_level = true
@@ -39,6 +72,7 @@ offset_left = 878.0
 offset_top = 178.0
 offset_right = 1072.0
 offset_bottom = 259.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "60"
 label_settings = SubResource("LabelSettings_m7l7f")
 horizontal_alignment = 1
@@ -49,8 +83,6 @@ script = ExtResource("8_aixl6")
 [node name="Timer" type="Timer" parent="PackageSpawner"]
 wait_time = 2.0
 autostart = true
-
-[node name="Arena" parent="." instance=ExtResource("3_df62l")]
 
 [node name="Player1" parent="." instance=ExtResource("9_erbm1")]
 position = Vector2(619, 778)

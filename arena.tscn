@@ -14,7 +14,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="wallsTopAndBottom" parent="." instance=ExtResource("3_bpyai")]
-position = Vector2(7, 3)
+position = Vector2(4, 47)
 
 [node name="collectAreaLeft" parent="." instance=ExtResource("4_wv821")]
 position = Vector2(-171, 406)
