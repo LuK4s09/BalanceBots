@@ -33,6 +33,7 @@ offset_right = 1797.0
 offset_bottom = 325.0
 
 [node name="TimerLabel" type="Label" parent="GameLoopController"]
+modulate = Color(0.458824, 0.854902, 0.976471, 1)
 top_level = true
 layout_mode = 0
 offset_left = 878.0
