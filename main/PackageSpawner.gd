@@ -6,6 +6,6 @@ func _on_timer_timeout():
 		#instance package scene
 	var package = Package.instantiate()
 	#set spawn position random
-	package.position = Vector2(randf_range(0, 1920),-100)
+	package.position = Vector2(randf_range(400, 1500),-100)
 	#add package to scene
 	get_parent().add_child(package)

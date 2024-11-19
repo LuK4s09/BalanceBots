@@ -6,7 +6,7 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvxwd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nktsj"]
-size = Vector2(66, 66)
+size = Vector2(64, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlndr"]
 size = Vector2(76, 76)
@@ -21,6 +21,7 @@ script = ExtResource("1_sdsrn")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.2, 1.2)
 shape = SubResource("RectangleShape2D_nktsj")
 
 [node name="BigPackage" type="CollisionShape2D" parent="."]
