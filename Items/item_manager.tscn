@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbbmrlthccm7y"]
+
+[ext_resource type="PackedScene" uid="uid://r23wws3ck85r" path="res://Items/itemclass.tscn" id="1_ypwul"]
+[ext_resource type="Script" path="res://Items/Magnet/Magnet.gd" id="2_s68aw"]
+
+[node name="ItemManager" type="Node2D"]
+
+[node name="Magnet" parent="." groups=["item"] instance=ExtResource("1_ypwul")]
+script = ExtResource("2_s68aw")
