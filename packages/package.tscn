@@ -11,7 +11,7 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlndr"]
 size = Vector2(76, 76)
 
-[node name="Package" type="RigidBody2D"]
+[node name="Package" type="RigidBody2D" groups=["attractable"]]
 collision_layer = 2
 collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_gvxwd")
