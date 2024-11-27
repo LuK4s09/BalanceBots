@@ -73,4 +73,3 @@ func move(): #makes Character move and calls lean
 func _process(_delta): #called every frame
 	move()
 	lookLeftRight()
-	
