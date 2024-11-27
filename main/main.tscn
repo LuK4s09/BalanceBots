@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bc4rmsxrekb44"]
+[gd_scene load_steps=10 format=3 uid="uid://bc4rmsxrekb44"]
 
 [ext_resource type="Script" path="res://main/PointCounter.gd" id="1_neoe5"]
 [ext_resource type="Script" path="res://GameLoopController.gd" id="1_vbj8m"]
 [ext_resource type="PackedScene" uid="uid://bgkit0ce8qjw8" path="res://collectArea/collectArea.tscn" id="2_vrhs0"]
 [ext_resource type="PackedScene" uid="uid://ckhem5qfoq20y" path="res://arena.tscn" id="3_df62l"]
 [ext_resource type="FontFile" uid="uid://di1woau083u0p" path="res://digital-7.ttf" id="3_yl1s7"]
+[ext_resource type="FontFile" uid="uid://cxm8gxg6xpl71" path="res://Digital-71.ttf" id="4_y5cq3"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
 [ext_resource type="PackedScene" uid="uid://bsh2ph6ky6bg2" path="res://bots/bot.tscn" id="9_erbm1"]
 
@@ -41,7 +42,7 @@ offset_top = -335.0
 offset_right = -718.0
 offset_bottom = -236.0
 theme_override_colors/font_color = Color(0.388235, 0.862745, 0.984314, 1)
-theme_override_fonts/font = ExtResource("3_yl1s7")
+theme_override_fonts/font = ExtResource("4_y5cq3")
 theme_override_font_sizes/font_size = 96
 text = "000"
 
@@ -52,7 +53,7 @@ offset_top = -335.0
 offset_right = 815.0
 offset_bottom = -236.0
 theme_override_colors/font_color = Color(0.984314, 0.815686, 0.443137, 1)
-theme_override_fonts/font = ExtResource("3_yl1s7")
+theme_override_fonts/font = ExtResource("4_y5cq3")
 theme_override_font_sizes/font_size = 96
 text = "000"
 
