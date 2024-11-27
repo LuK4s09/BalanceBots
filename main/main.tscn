@@ -35,25 +35,27 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="PointsLeft" type="Label" parent="PointCounter"]
+texture_filter = 3
 layout_mode = 0
-offset_left = -858.0
-offset_top = -335.0
-offset_right = -718.0
-offset_bottom = -236.0
+offset_left = -850.0
+offset_top = -308.0
+offset_right = -710.0
+offset_bottom = -209.0
 theme_override_colors/font_color = Color(0.388235, 0.862745, 0.984314, 1)
 theme_override_fonts/font = ExtResource("3_yl1s7")
-theme_override_font_sizes/font_size = 96
+theme_override_font_sizes/font_size = 86
 text = "000"
 
 [node name="PointsRight" type="Label" parent="PointCounter"]
+texture_filter = 3
 layout_mode = 0
-offset_left = 675.0
-offset_top = -335.0
-offset_right = 815.0
-offset_bottom = -236.0
+offset_left = 685.0
+offset_top = -308.0
+offset_right = 825.0
+offset_bottom = -209.0
 theme_override_colors/font_color = Color(0.984314, 0.815686, 0.443137, 1)
 theme_override_fonts/font = ExtResource("3_yl1s7")
-theme_override_font_sizes/font_size = 96
+theme_override_font_sizes/font_size = 86
 text = "000"
 
 [node name="GameLoopController" type="Control" parent="."]
@@ -65,30 +67,33 @@ script = ExtResource("1_vbj8m")
 autostart = true
 
 [node name="DisplayScoreLeft" type="Label" parent="GameLoopController"]
+texture_filter = 3
 layout_mode = 0
-offset_left = 124.0
-offset_top = 120.0
-offset_right = 262.0
-offset_bottom = 176.0
+offset_left = 131.0
+offset_top = 147.0
+offset_right = 252.0
+offset_bottom = 203.0
 theme_override_colors/font_color = Color(0.388235, 0.862745, 0.984314, 1)
 theme_override_fonts/font = ExtResource("3_yl1s7")
-theme_override_font_sizes/font_size = 55
-text = "Score:"
+theme_override_font_sizes/font_size = 53
+text = "Score"
 
 [node name="DisplayScoreRight" type="Label" parent="GameLoopController"]
+texture_filter = 3
 layout_mode = 0
-offset_left = 1657.0
-offset_top = 121.0
-offset_right = 1697.0
-offset_bottom = 144.0
+offset_left = 1667.0
+offset_top = 146.0
+offset_right = 1793.0
+offset_bottom = 202.0
 theme_override_colors/font_color = Color(0.984314, 0.815686, 0.443137, 1)
 theme_override_fonts/font = ExtResource("3_yl1s7")
-theme_override_font_sizes/font_size = 55
-text = "Score:"
+theme_override_font_sizes/font_size = 53
+text = "Score"
 
 [node name="TimerLabel" type="Label" parent="GameLoopController"]
 modulate = Color(0, 0, 0, 1)
 top_level = true
+texture_filter = 2
 layout_mode = 0
 offset_left = 878.0
 offset_top = 178.0

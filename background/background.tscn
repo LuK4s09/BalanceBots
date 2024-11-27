@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://du5daq5unqrt7"]
 
-[ext_resource type="Texture2D" uid="uid://cogliwmmkwm77" path="res://background/Background.png" id="1_cttix"]
+[ext_resource type="Texture2D" uid="uid://bcv1l8mo1rl0i" path="res://background/Background.png" id="1_1tjoi"]
 [ext_resource type="Texture2D" uid="uid://do087k2x3yvg6" path="res://background/illuminatingDisplayPressE.png" id="2_u32kl"]
 
 [node name="Background" type="Node2D"]
@@ -9,7 +9,7 @@
 texture_filter = 3
 position = Vector2(960, 540)
 scale = Vector2(2, 2)
-texture = ExtResource("1_cttix")
+texture = ExtResource("1_1tjoi")
 
 [node name="IlluminatingDisplayPressE" type="Sprite2D" parent="."]
 visible = false
