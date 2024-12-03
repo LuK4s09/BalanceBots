@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dq32yttt5pqel"]
+[gd_scene load_steps=7 format=3 uid="uid://dq32yttt5pqel"]
 
 [ext_resource type="Script" path="res://packages/Package.gd" id="1_sdsrn"]
 [ext_resource type="Texture2D" uid="uid://cq8pe0uiakttk" path="res://packages/Kiste - Kopie.png" id="2_fx02x"]
+[ext_resource type="AudioStream" uid="uid://ddusscd6qqcki" path="res://packages/metal bar falling sound effect.mp3" id="3_pgxv7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvxwd"]
 
@@ -16,6 +17,8 @@ collision_layer = 2
 collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_gvxwd")
 can_sleep = false
+max_contacts_reported = 100
+contact_monitor = true
 script = ExtResource("1_sdsrn")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -32,3 +35,8 @@ texture_filter = 3
 position = Vector2(1.90735e-06, -1.90735e-06)
 scale = Vector2(4.75, 4.75)
 texture = ExtResource("2_fx02x")
+
+[node name="bonksound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_pgxv7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -14,18 +14,16 @@ func _ready():
 
 func _on_collect_area_left_side_body_entered(body):
 	if body is package:
-		print("package entered left side")
 		body.queue_free()
-		POINTS_PLAYER1 += points_for_default_package
+		POINTS_PLAYER1 += body.default_PACKAGE_VALUE
 		update_PointLabels()
-		print("Points Player 1: " + str(POINTS_PLAYER1))
 
 
 func _on_collect_area_right_side_body_entered(body):
 	if body is package:
 		print("package entered right side")
 		body.queue_free()
-		POINTS_PLAYER2 += points_for_default_package
+		POINTS_PLAYER2 += body.default_PACKAGE_VALUE
 		update_PointLabels()
 		print("Points Player 2: " + str(POINTS_PLAYER2))
 

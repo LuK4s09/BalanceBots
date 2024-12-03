@@ -1,6 +1,7 @@
 extends Area2D
+var Time_Left = 15
+@onready var TimeLeftLabel = $TimeLeft
 @export var attraction_force = 900
-
 var attracted_objects : Array[PhysicsBody2D] = []
 
 func _on_body_entered(body : PhysicsBody2D):
@@ -21,3 +22,13 @@ func _physics_process(delta):
 			var direction = (global_position - body.global_position).normalized()
 			body.position += direction * attraction_force * delta  # Adjust attraction movement
 			
+
+
+func _on_timer_timeout():
+	Time_Left -= 1
+	TimeLeftLabel.text = str(Time_Left)
+	
+	if Time_Left < 0:
+		queue_free()
+	
+	

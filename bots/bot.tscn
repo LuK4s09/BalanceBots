@@ -147,3 +147,10 @@ metadata/_edit_lock_ = true
 
 [node name="ItemController" type="Node2D" parent="."]
 script = ExtResource("6_0hdsq")
+
+[node name="Item_Collider" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_Collider"]
+shape = SubResource("RectangleShape2D_1ir0q")
+
+[connection signal="body_entered" from="Item_Collider" to="ItemController" method="_on_item_collider_body_entered"]

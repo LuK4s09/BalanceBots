@@ -2,17 +2,18 @@ extends RigidBody2D
 
 class_name package
 
-@onready var displayPointsLeft = $"./PointsLeft"
-@onready var displayPointsRight = $"./PointsRight"
+@export var default_PACKAGE_VALUE = 1
+@export var golden_PACKAGE_VALUE = 3
+@export var golden_PACKAGE_posibility= 20
 
-@export var pointsLeft = 0
-@export var pointsRight = 0
-
-#displayPointsLeft.set_text(str(pointsLeft))
+#Sounds
+@onready var bonksound = $bonksound
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	if randi() % 100 < golden_PACKAGE_posibility:
+		default_PACKAGE_VALUE = golden_PACKAGE_VALUE
+		set_modulate(Color( 255, 255, 0, 255))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -22,14 +23,6 @@ func despawn_if_below_area():
 	if position.y > 1200:
 		queue_free()
 
-
-func _on_collect_area_left_area_entered(area):
-	print("Package collected for player left")
-	pointsLeft += 1
-	pass # Replace with function body.
-
-
-func _on_collect_area_right_area_entered(area):
-	print("Package collected for player right")
-	pointsRight += 1
-	pass # Replace with function body.
+#play Sound on Collision
+func _on_body_entered(body):
+	bonksound.play()
