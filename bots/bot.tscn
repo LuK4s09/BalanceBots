@@ -115,7 +115,7 @@ position = Vector2(0, 53)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_5saag")
 autoplay = "default"
-frame_progress = 0.102228
+frame_progress = 0.218047
 metadata/_edit_lock_ = true
 
 [node name="Player1LookLeft" type="AnimatedSprite2D" parent="."]

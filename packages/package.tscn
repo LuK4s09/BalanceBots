@@ -1,8 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dq32yttt5pqel"]
 
 [ext_resource type="Script" path="res://packages/Package.gd" id="1_sdsrn"]
-[ext_resource type="Texture2D" uid="uid://cq8pe0uiakttk" path="res://packages/Kiste - Kopie.png" id="2_fx02x"]
-[ext_resource type="AudioStream" uid="uid://ddusscd6qqcki" path="res://packages/metal bar falling sound effect.mp3" id="3_pgxv7"]
+[ext_resource type="Texture2D" uid="uid://cq8pe0uiakttk" path="res://packages/Kiste.png" id="2_fx02x"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvxwd"]
 
