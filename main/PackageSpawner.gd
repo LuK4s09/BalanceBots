@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var Package = preload("res://packages/package.tscn")
+var Package = preload("res://packages/package.tscn")
 
 func _on_timer_timeout():
 		#instance package scene

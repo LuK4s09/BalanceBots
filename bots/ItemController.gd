@@ -1,10 +1,8 @@
 extends Node2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#pass # Replace with function body.
-	use_Item("Magnet")
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,6 +18,7 @@ func _on_item_collider_body_entered(body):
 func use_Item(Item_Type : String):
 	match Item_Type:
 		"Magnet":
-			var Magnet_Scene = preload("res://Items/Magnet/magnet_on_player.tscn")
-			var Magnet_instance = Magnet_Scene.instantiate()
-			add_child(Magnet_instance)
+			if not has_node("Magnet_on_Player"):
+				var Magnet_Scene = preload("res://Items/Magnet/magnet_on_player.tscn")
+				var Magnet_instance = Magnet_Scene.instantiate()
+				add_child(Magnet_instance)

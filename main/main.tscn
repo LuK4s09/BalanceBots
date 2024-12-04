@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bc4rmsxrekb44"]
+[gd_scene load_steps=11 format=3 uid="uid://bc4rmsxrekb44"]
 
 [ext_resource type="Script" path="res://main/PointCounter.gd" id="1_neoe5"]
 [ext_resource type="Script" path="res://GameLoopController.gd" id="1_vbj8m"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://di1woau083u0p" path="res://digital-7.ttf" id="3_yl1s7"]
 [ext_resource type="FontFile" uid="uid://cxm8gxg6xpl71" path="res://Digital-71.ttf" id="4_y5cq3"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
+[ext_resource type="Script" path="res://Items/Item_in_Arena/ItemSpawner.gd" id="8_nw2xw"]
 [ext_resource type="PackedScene" uid="uid://bsh2ph6ky6bg2" path="res://bots/bot.tscn" id="9_erbm1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m7l7f"]
@@ -63,6 +64,7 @@ text = "000"
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_vbj8m")
+time_left = 99
 
 [node name="Timer" type="Timer" parent="GameLoopController"]
 autostart = true
@@ -112,6 +114,13 @@ script = ExtResource("8_aixl6")
 wait_time = 2.0
 autostart = true
 
+[node name="ItemSpawner" type="Node2D" parent="."]
+script = ExtResource("8_nw2xw")
+
+[node name="Timer" type="Timer" parent="ItemSpawner"]
+wait_time = 20.0
+autostart = true
+
 [node name="Player1" parent="." instance=ExtResource("9_erbm1")]
 position = Vector2(619, 778)
 
@@ -128,3 +137,4 @@ zoom = Vector2(0.5, 0.5)
 [connection signal="body_entered" from="PointCounter/collectAreaRightSide" to="PointCounter" method="_on_collect_area_right_side_body_entered"]
 [connection signal="timeout" from="GameLoopController/Timer" to="GameLoopController" method="_on_timer_timeout"]
 [connection signal="timeout" from="PackageSpawner/Timer" to="PackageSpawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="ItemSpawner/Timer" to="ItemSpawner" method="_on_timer_timeout"]

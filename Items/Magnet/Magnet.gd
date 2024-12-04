@@ -1,5 +1,5 @@
 extends Area2D
-var Time_Left = 15
+var Time_Left = 8
 @onready var TimeLeftLabel = $TimeLeft
 @export var attraction_force = 900
 var attracted_objects : Array[PhysicsBody2D] = []
