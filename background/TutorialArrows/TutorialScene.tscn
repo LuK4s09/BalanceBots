@@ -64,9 +64,9 @@ sprite_frames = SubResource("SpriteFrames_2rfyc")
 autoplay = "default"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 779.0
+offset_left = 740.0
 offset_top = 484.0
-offset_right = 1221.0
+offset_right = 1182.0
 offset_bottom = 613.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 44

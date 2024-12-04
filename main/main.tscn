@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bc4rmsxrekb44"]
+[gd_scene load_steps=13 format=3 uid="uid://bc4rmsxrekb44"]
 
 [ext_resource type="Script" path="res://main/PointCounter.gd" id="1_neoe5"]
 [ext_resource type="Script" path="res://GameLoopController.gd" id="1_vbj8m"]
@@ -8,7 +8,9 @@
 [ext_resource type="FontFile" uid="uid://cxm8gxg6xpl71" path="res://Digital-71.ttf" id="4_y5cq3"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
 [ext_resource type="Script" path="res://Items/Item_in_Arena/ItemSpawner.gd" id="8_nw2xw"]
+[ext_resource type="PackedScene" uid="uid://c64gjniadc2a3" path="res://background/TutorialArrows/TutorialScene.tscn" id="9_08yv8"]
 [ext_resource type="PackedScene" uid="uid://bsh2ph6ky6bg2" path="res://bots/bot.tscn" id="9_erbm1"]
+[ext_resource type="Script" path="res://background/TutorialArrows/TutorialScene.gd" id="10_77kps"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m7l7f"]
 font_size = 50
@@ -121,6 +123,14 @@ script = ExtResource("8_nw2xw")
 wait_time = 20.0
 autostart = true
 
+[node name="TutorialScene" parent="." instance=ExtResource("9_08yv8")]
+script = ExtResource("10_77kps")
+
+[node name="Timer" type="Timer" parent="TutorialScene"]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
 [node name="Player1" parent="." instance=ExtResource("9_erbm1")]
 position = Vector2(619, 778)
 
@@ -138,3 +148,4 @@ zoom = Vector2(0.5, 0.5)
 [connection signal="timeout" from="GameLoopController/Timer" to="GameLoopController" method="_on_timer_timeout"]
 [connection signal="timeout" from="PackageSpawner/Timer" to="PackageSpawner" method="_on_timer_timeout"]
 [connection signal="timeout" from="ItemSpawner/Timer" to="ItemSpawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="TutorialScene/Timer" to="TutorialScene" method="_on_timer_timeout"]
