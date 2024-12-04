@@ -25,4 +25,5 @@ func despawn_if_below_area():
 
 #play Sound on Collision
 func _on_body_entered(body):
+	bonksound.pitch_scale = randf_range(0.3,0.5);
 	bonksound.play()

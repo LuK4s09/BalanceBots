@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://packages/Package.gd" id="1_sdsrn"]
 [ext_resource type="Texture2D" uid="uid://cq8pe0uiakttk" path="res://packages/Kiste.png" id="2_fx02x"]
-[ext_resource type="AudioStream" uid="uid://ddusscd6qqcki" path="res://packages/metal bar falling sound effect.mp3" id="3_pgxv7"]
+[ext_resource type="AudioStream" uid="uid://7ljpgxrmo5we" path="res://packages/beep_new.wav" id="3_tx1bh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvxwd"]
 
@@ -37,6 +37,6 @@ scale = Vector2(4.75, 4.75)
 texture = ExtResource("2_fx02x")
 
 [node name="bonksound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_pgxv7")
+stream = ExtResource("3_tx1bh")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
