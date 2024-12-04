@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bc4rmsxrekb44"]
+[gd_scene load_steps=11 format=3 uid="uid://bc4rmsxrekb44"]
 
 [ext_resource type="Script" path="res://main/PointCounter.gd" id="1_neoe5"]
 [ext_resource type="Script" path="res://GameLoopController.gd" id="1_vbj8m"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://di1woau083u0p" path="res://digital-7.ttf" id="3_yl1s7"]
 [ext_resource type="FontFile" uid="uid://cxm8gxg6xpl71" path="res://Digital-71.ttf" id="4_y5cq3"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
+[ext_resource type="PackedScene" uid="uid://c64gjniadc2a3" path="res://background/TutorialArrows/TutorialScene.tscn" id="9_2t7yq"]
 [ext_resource type="PackedScene" uid="uid://bsh2ph6ky6bg2" path="res://bots/bot.tscn" id="9_erbm1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m7l7f"]
@@ -123,6 +124,8 @@ PlayerNumber = 1
 position = Vector2(982, 510)
 enabled = false
 zoom = Vector2(0.5, 0.5)
+
+[node name="TutorialScene" parent="." instance=ExtResource("9_2t7yq")]
 
 [connection signal="body_entered" from="PointCounter/collectAreaLeftSide" to="PointCounter" method="_on_collect_area_left_side_body_entered"]
 [connection signal="body_entered" from="PointCounter/collectAreaRightSide" to="PointCounter" method="_on_collect_area_right_side_body_entered"]

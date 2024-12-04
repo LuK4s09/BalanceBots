@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://c64gjniadc2a3"]
+
+[ext_resource type="Texture2D" uid="uid://cqy5trma6jv0i" path="res://background/TutorialArrows/ArrowP1Blue.png" id="1_n4u8y"]
+[ext_resource type="Texture2D" uid="uid://d0l1njamkycqe" path="res://background/TutorialArrows/ArrowP2Yellow.png" id="2_ja5gc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3dty"]
+atlas = ExtResource("1_n4u8y")
+region = Rect2(0, 0, 175, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk8py"]
+atlas = ExtResource("1_n4u8y")
+region = Rect2(175, 0, 175, 105)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dcywb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3dty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk8py")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipksf"]
+atlas = ExtResource("2_ja5gc")
+region = Rect2(0, 0, 175, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8ldv"]
+atlas = ExtResource("2_ja5gc")
+region = Rect2(175, 0, 175, 105)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2rfyc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipksf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8ldv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="TutorialScene" type="Node2D"]
+
+[node name="LeftArrow" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(341, 520)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_dcywb")
+autoplay = "default"
+
+[node name="RightArrow" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(1585, 520)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_2rfyc")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 779.0
+offset_top = 484.0
+offset_right = 1221.0
+offset_bottom = 613.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 44
+text = "Collect Packages!
+Deliver to your Zone!"
+horizontal_alignment = 1
+vertical_alignment = 1
