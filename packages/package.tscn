@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dq32yttt5pqel"]
+[gd_scene load_steps=8 format=3 uid="uid://dq32yttt5pqel"]
 
 [ext_resource type="Script" path="res://packages/Package.gd" id="1_sdsrn"]
-[ext_resource type="Texture2D" uid="uid://cq8pe0uiakttk" path="res://packages/Kiste.png" id="2_fx02x"]
+[ext_resource type="Texture2D" uid="uid://57a1234xyuqi" path="res://packages/Kiste_Neutral.png" id="2_jk1t7"]
 [ext_resource type="AudioStream" uid="uid://7ljpgxrmo5we" path="res://packages/beep_new.wav" id="3_tx1bh"]
+[ext_resource type="Texture2D" uid="uid://bxigxgwp6jsug" path="res://packages/Kiste_Gold.png" id="4_wwpha"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvxwd"]
 
@@ -34,9 +35,16 @@ shape = SubResource("RectangleShape2D_nlndr")
 texture_filter = 3
 position = Vector2(1.90735e-06, -1.90735e-06)
 scale = Vector2(4.75, 4.75)
-texture = ExtResource("2_fx02x")
+texture = ExtResource("2_jk1t7")
 
 [node name="bonksound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_tx1bh")
+
+[node name="Kiste_Gold" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 3
+position = Vector2(1.90735e-06, -1.90735e-06)
+scale = Vector2(4.75, 4.75)
+texture = ExtResource("4_wwpha")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

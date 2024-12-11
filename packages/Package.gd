@@ -8,12 +8,13 @@ class_name package
 
 #Sounds
 @onready var bonksound = $bonksound
+@onready var goldPackageSprite = $Kiste_Gold
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if randi() % 100 < golden_PACKAGE_posibility:
 		default_PACKAGE_VALUE = golden_PACKAGE_VALUE
-		set_modulate(Color( 255, 255, 0, 255))
+		goldPackageSprite.show()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
