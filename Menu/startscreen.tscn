@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccfqn73ohmnro"]
+[gd_scene load_steps=3 format=3 uid="uid://ccfqn73ohmnro"]
 
 [ext_resource type="Script" path="res://Menu/startscreen.gd" id="1_nbaeq"]
+[ext_resource type="Texture2D" uid="uid://cpx2424uc4m8l" path="res://Menu/Startscreen.png" id="2_rcq3f"]
 
 [node name="Startscreen" type="Control"]
 layout_mode = 3
@@ -10,11 +11,17 @@ offset_right = 33.0
 offset_bottom = 40.0
 script = ExtResource("1_nbaeq")
 
+[node name="Titlescreen" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(967, 540)
+scale = Vector2(2, 2)
+texture = ExtResource("2_rcq3f")
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 702.0
-offset_top = 263.0
-offset_right = 1254.0
+offset_left = 669.0
+offset_top = 551.0
+offset_right = 1260.0
 offset_bottom = 747.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
@@ -25,6 +32,7 @@ layout_mode = 2
 text = "Play"
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Options"
 

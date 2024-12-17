@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c27d76dxgf5di"]
+
+[ext_resource type="Script" path="res://Item_in_Arena.gd" id="1_xjkdr"]
+[ext_resource type="Texture2D" uid="uid://bh3pi6t3xntxn" path="res://Items/Item_in_Arena/Magnet_WIP.png" id="2_ybr1h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_txgsa"]
+radius = 13.6015
+
+[node name="Item_in_Arena" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_xjkdr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_ybr1h")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_txgsa")
+metadata/_edit_lock_ = true

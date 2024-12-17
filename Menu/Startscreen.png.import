@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq8pe0uiakttk"
-path="res://.godot/imported/Kiste - Kopie.png-a1b6783d97adb28dfdedb7b9b822f566.ctex"
+uid="uid://cpx2424uc4m8l"
+path="res://.godot/imported/Startscreen.png-75a3b2cd4e402c43f0a6f94673ebd0a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://packages/Kiste - Kopie.png"
-dest_files=["res://.godot/imported/Kiste - Kopie.png-a1b6783d97adb28dfdedb7b9b822f566.ctex"]
+source_file="res://Menu/Startscreen.png"
+dest_files=["res://.godot/imported/Startscreen.png-75a3b2cd4e402c43f0a6f94673ebd0a3.ctex"]
 
 [params]
 

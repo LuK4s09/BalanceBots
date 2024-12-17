@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcv1l8mo1rl0i"
-path="res://.godot/imported/Background.png-3329b02cace7da97afd5a5173e3680b5.ctex"
+uid="uid://47upsyj8xtvk"
+path="res://.godot/imported/GoldParticle.png-884ae5879f7b8cad1c7b7a6e322fd1c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/Background.png"
-dest_files=["res://.godot/imported/Background.png-3329b02cace7da97afd5a5173e3680b5.ctex"]
+source_file="res://packages/GoldParticle.png"
+dest_files=["res://.godot/imported/GoldParticle.png-884ae5879f7b8cad1c7b7a6e322fd1c7.ctex"]
 
 [params]
 

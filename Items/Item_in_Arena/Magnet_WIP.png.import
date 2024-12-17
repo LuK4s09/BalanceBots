@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcv1l8mo1rl0i"
-path="res://.godot/imported/Background.png-3329b02cace7da97afd5a5173e3680b5.ctex"
+uid="uid://bh3pi6t3xntxn"
+path="res://.godot/imported/Magnet_WIP.png-52e1a3ab77e1f2c4e446c52de390331e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/Background.png"
-dest_files=["res://.godot/imported/Background.png-3329b02cace7da97afd5a5173e3680b5.ctex"]
+source_file="res://Items/Item_in_Arena/Magnet_WIP.png"
+dest_files=["res://.godot/imported/Magnet_WIP.png-52e1a3ab77e1f2c4e446c52de390331e.ctex"]
 
 [params]
 

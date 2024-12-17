@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bsh2ph6ky6bg2"]
+[gd_scene load_steps=21 format=3 uid="uid://bsh2ph6ky6bg2"]
 
 [ext_resource type="Script" path="res://bots/Bot.gd" id="1_nh0n2"]
 [ext_resource type="Texture2D" uid="uid://cp7w8gid76g0r" path="res://bots/Player2LookRight.png" id="2_8d8ld"]
@@ -98,8 +98,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3huoc"]
+size = Vector2(271, 38)
+
 [node name="Bot" type="CharacterBody2D"]
-collision_layer = 3
+collision_layer = 7
+collision_mask = 5
 script = ExtResource("1_nh0n2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -111,7 +115,7 @@ position = Vector2(0, 53)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_5saag")
 autoplay = "default"
-frame_progress = 0.102228
+frame_progress = 0.218047
 metadata/_edit_lock_ = true
 
 [node name="Player1LookLeft" type="AnimatedSprite2D" parent="."]
@@ -147,3 +151,12 @@ metadata/_edit_lock_ = true
 
 [node name="ItemController" type="Node2D" parent="."]
 script = ExtResource("6_0hdsq")
+
+[node name="Item_Collider" type="Area2D" parent="ItemController"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemController/Item_Collider"]
+shape = SubResource("RectangleShape2D_3huoc")
+
+[connection signal="body_entered" from="ItemController/Item_Collider" to="ItemController" method="_on_item_collider_body_entered"]

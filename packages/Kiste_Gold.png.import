@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcv1l8mo1rl0i"
-path="res://.godot/imported/Background.png-3329b02cace7da97afd5a5173e3680b5.ctex"
+uid="uid://bxigxgwp6jsug"
+path="res://.godot/imported/Kiste_Gold.png-96df00ecb88d1d7a939f2c34cbdbbe7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/Background.png"
-dest_files=["res://.godot/imported/Background.png-3329b02cace7da97afd5a5173e3680b5.ctex"]
+source_file="res://packages/Kiste_Gold.png"
+dest_files=["res://.godot/imported/Kiste_Gold.png-96df00ecb88d1d7a939f2c34cbdbbe7a.ctex"]
 
 [params]
 

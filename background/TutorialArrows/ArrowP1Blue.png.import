@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhmlvnmni1n1t"
-path="res://.godot/imported/Kiste32x32.png-a4daaa5d95da7514ea6a29fd12562415.ctex"
+uid="uid://cqy5trma6jv0i"
+path="res://.godot/imported/ArrowP1Blue.png-e5a1ca57c81e0d2dab15fe34fc808e36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://packages/Kiste32x32.png"
-dest_files=["res://.godot/imported/Kiste32x32.png-a4daaa5d95da7514ea6a29fd12562415.ctex"]
+source_file="res://background/TutorialArrows/ArrowP1Blue.png"
+dest_files=["res://.godot/imported/ArrowP1Blue.png-e5a1ca57c81e0d2dab15fe34fc808e36.ctex"]
 
 [params]
 
