@@ -3,6 +3,7 @@ class_name Bot
 
 #relavant movement variables
 @export var SPEED = 650.0
+@export var down_SPEED_multiplier = 2
 @export var ROTATION = 5
 
 #Sprite Variables
@@ -66,6 +67,8 @@ func lookLeftRight(): #Switching between left & right facing Sprites
 func move(): #makes Character move and calls lean
 	input_direction = Input.get_vector(mvLeft, mvRight, mvUp, mvDown)
 	velocity = input_direction * SPEED
+	if input_direction.y > 0:
+		velocity *= down_SPEED_multiplier
 	move_and_slide()
 	lean()
 
