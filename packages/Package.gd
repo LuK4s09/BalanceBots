@@ -8,7 +8,7 @@ class_name package
 
 #Sounds
 @onready var bonksound = $bonksound
-@onready var goldPackageNode = $GoldKistenNode
+@onready var goldPackageNode = $GoldKiste
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

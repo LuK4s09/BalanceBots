@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://packages/Package.gd" id="1_sdsrn"]
 [ext_resource type="Texture2D" uid="uid://57a1234xyuqi" path="res://packages/Kiste_Neutral.png" id="2_jk1t7"]
 [ext_resource type="AudioStream" uid="uid://7ljpgxrmo5we" path="res://packages/beep_new.wav" id="3_tx1bh"]
-[ext_resource type="Texture2D" uid="uid://47upsyj8xtvk" path="res://packages/GoldParticle.png" id="4_2anvw"]
 [ext_resource type="Texture2D" uid="uid://bxigxgwp6jsug" path="res://packages/Kiste_Gold.png" id="4_wwpha"]
+[ext_resource type="Texture2D" path="res://packages/GoldParticle.png" id="5_h4p8m"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvxwd"]
 
@@ -41,31 +41,21 @@ texture = ExtResource("2_jk1t7")
 [node name="bonksound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_tx1bh")
 
-[node name="GoldKistenNode" type="Node2D" parent="."]
+[node name="GoldKiste" type="Node2D" parent="."]
 visible = false
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="GoldKistenNode"]
 position = Vector2(1.90735e-06, -1.90735e-06)
 scale = Vector2(4.75, 4.75)
-amount = 4
-lifetime = 0.15
-speed_scale = 0.3
-randomness = 1.0
-texture = ExtResource("4_2anvw")
-emission_shape = 1
-emission_sphere_radius = 5.94
-particle_flag_align_y = true
-direction = Vector2(1, 1)
-spread = 180.0
-gravity = Vector2(0, 0)
-initial_velocity_min = 62.66
-initial_velocity_max = 130.84
-color = Color(1, 0.960784, 0.231373, 1)
 
-[node name="Kiste_Gold" type="Sprite2D" parent="GoldKistenNode"]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="GoldKiste"]
 texture_filter = 3
-position = Vector2(1.90735e-06, -1.90735e-06)
-scale = Vector2(4.75, 4.75)
+texture = ExtResource("5_h4p8m")
+spread = 180.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 37.38
+initial_velocity_max = 37.38
+
+[node name="Kiste_Gold" type="Sprite2D" parent="GoldKiste"]
+texture_filter = 3
 texture = ExtResource("4_wwpha")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
