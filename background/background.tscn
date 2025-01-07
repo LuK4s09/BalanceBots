@@ -1,6 +1,6 @@
 [gd_scene load_steps=50 format=3 uid="uid://du5daq5unqrt7"]
 
-[ext_resource type="Texture2D" uid="uid://bcv1l8mo1rl0i" path="res://background/Background.png" id="1_1tjoi"]
+[ext_resource type="Texture2D" uid="uid://fhwwuuk0mtma" path="res://background/Background.png" id="1_1tjoi"]
 [ext_resource type="Texture2D" uid="uid://do087k2x3yvg6" path="res://background/illuminatingDisplayPressE.png" id="2_u32kl"]
 [ext_resource type="Texture2D" uid="uid://chb20tg78wtsp" path="res://background/conveyorBelt/conveyorBackground1.png" id="3_61fu0"]
 [ext_resource type="Texture2D" uid="uid://btj3f6k8hkwa2" path="res://background/conveyorBelt/Background_only_lower_Parts.png" id="4_8ov40"]
@@ -337,66 +337,82 @@ scale = Vector2(4.32813, 4.32813)
 texture = ExtResource("2_u32kl")
 
 [node name="BoxAnimation" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.682353)
+self_modulate = Color(1, 1, 1, 0.784314)
 texture_filter = 3
-position = Vector2(137.672, 966.25)
-scale = Vector2(1.85656, 1.85656)
+position = Vector2(144, 937)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_pj0ae")
 autoplay = "default"
 
 [node name="BoxAnimation2" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.682353)
+self_modulate = Color(1, 1, 1, 0.784314)
 texture_filter = 3
-position = Vector2(374.672, 966.25)
-scale = Vector2(1.85656, 1.85656)
+position = Vector2(336, 937)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_pj0ae")
 autoplay = "default"
 
 [node name="BoxAnimation3" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.682353)
+self_modulate = Color(1, 1, 1, 0.784314)
 texture_filter = 3
-position = Vector2(611.82, 966.25)
-scale = Vector2(1.85656, 1.85656)
+position = Vector2(528, 937)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_pj0ae")
 autoplay = "default"
 
 [node name="BoxAnimation4" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.682353)
+self_modulate = Color(1, 1, 1, 0.784314)
 texture_filter = 3
-position = Vector2(848.82, 966.25)
-scale = Vector2(1.85656, 1.85656)
+position = Vector2(720, 937)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_pj0ae")
 autoplay = "default"
 
 [node name="BoxAnimation5" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.682353)
+self_modulate = Color(1, 1, 1, 0.784314)
 texture_filter = 3
-position = Vector2(1086.82, 966.25)
-scale = Vector2(1.85656, 1.85656)
+position = Vector2(911, 937)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_pj0ae")
 autoplay = "default"
 
 [node name="BoxAnimation6" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.682353)
+self_modulate = Color(1, 1, 1, 0.784314)
 texture_filter = 3
-position = Vector2(1323.82, 966.25)
-scale = Vector2(1.85656, 1.85656)
+position = Vector2(1103, 937)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_pj0ae")
 autoplay = "default"
 
 [node name="BoxAnimation7" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.682353)
+self_modulate = Color(1, 1, 1, 0.784314)
 texture_filter = 3
-position = Vector2(1560.97, 966.25)
-scale = Vector2(1.85656, 1.85656)
+position = Vector2(1295, 937)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_pj0ae")
 autoplay = "default"
 
 [node name="BoxAnimation8" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.682353)
+self_modulate = Color(1, 1, 1, 0.784314)
 texture_filter = 3
-position = Vector2(1797.97, 966.25)
-scale = Vector2(1.85656, 1.85656)
+position = Vector2(1487, 937)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_pj0ae")
+autoplay = "default"
+
+[node name="BoxAnimation9" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.784314)
+texture_filter = 3
+position = Vector2(1679, 937)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_pj0ae")
+autoplay = "default"
+
+[node name="BoxAnimation10" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.784314)
+texture_filter = 3
+position = Vector2(1871, 937)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_pj0ae")
 autoplay = "default"
 
