@@ -1,6 +1,6 @@
 [gd_scene load_steps=50 format=3 uid="uid://du5daq5unqrt7"]
 
-[ext_resource type="Texture2D" uid="uid://fhwwuuk0mtma" path="res://background/Background.png" id="1_1tjoi"]
+[ext_resource type="Texture2D" uid="uid://yk0w4e3p53jj" path="res://background/Background.png" id="1_1tjoi"]
 [ext_resource type="Texture2D" uid="uid://do087k2x3yvg6" path="res://background/illuminatingDisplayPressE.png" id="2_u32kl"]
 [ext_resource type="Texture2D" uid="uid://chb20tg78wtsp" path="res://background/conveyorBelt/conveyorBackground1.png" id="3_61fu0"]
 [ext_resource type="Texture2D" uid="uid://btj3f6k8hkwa2" path="res://background/conveyorBelt/Background_only_lower_Parts.png" id="4_8ov40"]

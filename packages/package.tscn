@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://57a1234xyuqi" path="res://packages/Kiste_Neutral.png" id="2_jk1t7"]
 [ext_resource type="AudioStream" uid="uid://7ljpgxrmo5we" path="res://packages/beep_new.wav" id="3_tx1bh"]
 [ext_resource type="Texture2D" uid="uid://bxigxgwp6jsug" path="res://packages/Kiste_Gold.png" id="4_wwpha"]
-[ext_resource type="Texture2D" path="res://packages/GoldParticle.png" id="5_h4p8m"]
+[ext_resource type="Texture2D" uid="uid://47upsyj8xtvk" path="res://packages/GoldParticle.png" id="5_h4p8m"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvxwd"]
 
