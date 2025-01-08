@@ -15,6 +15,7 @@ size = Vector2(64, 64)
 size = Vector2(76, 76)
 
 [node name="Package" type="RigidBody2D" groups=["attractable"]]
+top_level = true
 collision_layer = 2
 collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_gvxwd")
