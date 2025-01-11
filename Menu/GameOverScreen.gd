@@ -47,3 +47,9 @@ func apply_last_frame():
 		background.texture = last_frame
 	else:
 		print("ERROR: Background node is missing!")
+
+
+func _on_play_again_pressed():
+	get_tree().change_scene_to_file("res://main/main.tscn")
+	queue_free()
+	get_tree().paused = false
