@@ -21,13 +21,16 @@ func _on_collect_area_left_side_body_entered(body):
 
 func _on_collect_area_right_side_body_entered(body):
 	if body is package:
-		print("package entered right side")
 		body.queue_free()
 		POINTS_PLAYER2 += body.default_PACKAGE_VALUE
 		update_PointLabels()
-		print("Points Player 2: " + str(POINTS_PLAYER2))
 
 
 func update_PointLabels():
 	Label_PointsLeft.text = str(POINTS_PLAYER1).lpad(3, "0")
 	Label_PointsRight.text = str(POINTS_PLAYER2).lpad(3, "0")
+
+func get_Points1():
+	return POINTS_PLAYER1
+func get_Points2():
+	return POINTS_PLAYER2

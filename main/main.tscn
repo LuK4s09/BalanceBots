@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://main/PointCounter.gd" id="1_neoe5"]
 [ext_resource type="Script" path="res://GameLoopController.gd" id="1_vbj8m"]
 [ext_resource type="PackedScene" uid="uid://bgkit0ce8qjw8" path="res://collectArea/collectArea.tscn" id="2_vrhs0"]
-[ext_resource type="PackedScene" uid="uid://ckhem5qfoq20y" path="res://arena.tscn" id="3_df62l"]
+[ext_resource type="PackedScene" uid="uid://ckhem5qfoq20y" path="res://main/arena.tscn" id="3_df62l"]
 [ext_resource type="FontFile" uid="uid://di1woau083u0p" path="res://digital-7.ttf" id="3_yl1s7"]
 [ext_resource type="FontFile" uid="uid://cxm8gxg6xpl71" path="res://Digital-71.ttf" id="4_y5cq3"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
@@ -67,7 +67,7 @@ text = "000"
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_vbj8m")
-time_left = 99
+time_left = 10
 
 [node name="Timer" type="Timer" parent="GameLoopController"]
 autostart = true
