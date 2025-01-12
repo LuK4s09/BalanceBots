@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2tqaqpnbnxwb"]
+
+[ext_resource type="Script" path="res://main/almost_over_sirene.gd" id="1_vmexj"]
+[ext_resource type="AudioStream" uid="uid://bmm73lfgsofnt" path="res://Sounds/Alarm.wav" id="1_yl2sq"]
+
+[node name="almost_over_Sirene" type="Node2D"]
+script = ExtResource("1_vmexj")
+
+[node name="Alarm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_yl2sq")
+
+[node name="Filter" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Filter"]
+offset_right = 1928.0
+offset_bottom = 1092.0
+color = Color(1, 0, 0, 0.137255)
+
+[node name="BlinkTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="BlinkTimer" to="." method="_on_blink_timer_timeout"]

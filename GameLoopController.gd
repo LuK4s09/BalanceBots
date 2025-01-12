@@ -1,6 +1,6 @@
 extends Node
 
-@export var time_left: int = 180 # Lenght of one game
+@export var time_left: int = 99 # Lenght of one game
 
 @onready var TimerLabel = $TimerLabel
 
@@ -16,6 +16,9 @@ func _on_timer_timeout(): #Timer is set to 1s, so this function will be called e
 	#Decrease time left
 	time_left -= 1
 	update_TimerLabel()
+	
+	if time_left == 15:
+		activate_KistenRausch()
 	
 	#Stop Timer if time runs out
 	if time_left <= 0:
@@ -40,3 +43,7 @@ func switch_to_GameOver():
 	get_tree().paused = true
 	get_tree().root.add_child(game_over_screen)
 
+func activate_KistenRausch():
+	var package_spawner_timer = get_node("/root/Main/PackageSpawner/Timer")
+	package_spawner_timer.set_wait_time(0.5)
+	$almost_over_Sirene.activate()

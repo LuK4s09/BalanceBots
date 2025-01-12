@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bc4rmsxrekb44"]
+[gd_scene load_steps=14 format=3 uid="uid://bc4rmsxrekb44"]
 
 [ext_resource type="Script" path="res://main/PointCounter.gd" id="1_neoe5"]
 [ext_resource type="Script" path="res://GameLoopController.gd" id="1_vbj8m"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ckhem5qfoq20y" path="res://main/arena.tscn" id="3_df62l"]
 [ext_resource type="FontFile" uid="uid://di1woau083u0p" path="res://digital-7.ttf" id="3_yl1s7"]
 [ext_resource type="FontFile" uid="uid://cxm8gxg6xpl71" path="res://Digital-71.ttf" id="4_y5cq3"]
+[ext_resource type="PackedScene" uid="uid://b2tqaqpnbnxwb" path="res://main/almost_over_sirene.tscn" id="7_qaiyi"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
 [ext_resource type="Script" path="res://Items/Item_in_Arena/ItemSpawner.gd" id="8_nw2xw"]
 [ext_resource type="PackedScene" uid="uid://c64gjniadc2a3" path="res://background/TutorialArrows/TutorialScene.tscn" id="9_08yv8"]
@@ -67,7 +68,6 @@ text = "000"
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_vbj8m")
-time_left = 99
 
 [node name="Timer" type="Timer" parent="GameLoopController"]
 autostart = true
@@ -108,6 +108,8 @@ text = "60"
 label_settings = SubResource("LabelSettings_m7l7f")
 horizontal_alignment = 1
 
+[node name="almost_over_Sirene" parent="GameLoopController" instance=ExtResource("7_qaiyi")]
+
 [node name="PackageSpawner" type="Node2D" parent="."]
 script = ExtResource("8_aixl6")
 
@@ -131,11 +133,9 @@ one_shot = true
 autostart = true
 
 [node name="Player1" parent="." instance=ExtResource("9_erbm1")]
-top_level = true
 position = Vector2(619, 778)
 
 [node name="Player2" parent="." instance=ExtResource("9_erbm1")]
-top_level = true
 position = Vector2(1275, 784)
 PlayerNumber = 1
 
