@@ -67,7 +67,7 @@ text = "000"
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_vbj8m")
-time_left = 10
+time_left = 99
 
 [node name="Timer" type="Timer" parent="GameLoopController"]
 autostart = true

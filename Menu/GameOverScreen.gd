@@ -12,10 +12,14 @@ func _ready():
 	#apply texture if it was set before scene ready
 	if last_frame:
 		apply_last_frame()
+	
 	pointcounter = get_tree().root.get_node("Main/PointCounter")
-	print(pointcounter)
-	pointsplayer1 = pointcounter.get_Points1()
-	pointsplayer2 = pointcounter.get_Points2()
+	if pointcounter:
+		pointsplayer1 = pointcounter.get_Points1()
+		pointsplayer2 = pointcounter.get_Points2()
+	else:
+		pointsplayer1 = 0
+		pointsplayer2 = 0
 	if pointsplayer1 > pointsplayer2:
 		WinText.set_text("PLAYER 1 WINS!")
 		WinText.label_settings.set_font_color("63dcfb")
@@ -25,6 +29,7 @@ func _ready():
 	elif pointsplayer1 == pointsplayer2:
 		WinText.set_text("DRAW")
 	
+	$Buttons/PlayAgain.grab_focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

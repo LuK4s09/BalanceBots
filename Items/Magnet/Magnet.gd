@@ -28,7 +28,8 @@ func _on_timer_timeout():
 	Time_Left -= 1
 	TimeLeftLabel.text = str(Time_Left)
 	
+	if Time_Left < 2:
+		$Sphere.set_modulate("fe07005d")
+	
 	if Time_Left < 0:
 		queue_free()
-	
-	

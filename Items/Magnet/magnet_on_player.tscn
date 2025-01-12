@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://lds1hesruws"]
+[gd_scene load_steps=5 format=3 uid="uid://lds1hesruws"]
 
 [ext_resource type="Script" path="res://Items/Magnet/Magnet.gd" id="1_c1lh6"]
+[ext_resource type="Texture2D" uid="uid://cvp03lrsp6dsj" path="res://Items/Magnet/color-blob-banner-clip-art-free-png.png" id="2_hspy3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_24dxh"]
 radius = 297.14
@@ -10,22 +11,32 @@ font_size = 40
 font_color = Color(0, 0, 0, 1)
 
 [node name="Magnet_on_Player" type="Area2D"]
+show_behind_parent = true
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_c1lh6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+show_behind_parent = true
 shape = SubResource("CircleShape2D_24dxh")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
 [node name="TimeLeft" type="Label" parent="."]
+visible = false
 offset_left = -32.0
 offset_top = 164.0
 offset_right = 34.0
 offset_bottom = 206.0
 label_settings = SubResource("LabelSettings_1r6jr")
+
+[node name="Sphere" type="Sprite2D" parent="."]
+modulate = Color(0.898039, 0.964706, 1, 0.364706)
+show_behind_parent = true
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_hspy3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
