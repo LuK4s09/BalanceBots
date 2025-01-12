@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://gjwxgbsm0pgc"]
+[gd_scene load_steps=7 format=3 uid="uid://gjwxgbsm0pgc"]
 
 [ext_resource type="Script" path="res://Menu/GameOverScreen.gd" id="1_pebi7"]
+[ext_resource type="Texture2D" uid="uid://yk0w4e3p53jj" path="res://background/Background.png" id="2_a12s2"]
 [ext_resource type="FontFile" uid="uid://cxm8gxg6xpl71" path="res://Digital-71.ttf" id="2_bt5h0"]
 [ext_resource type="Texture2D" uid="uid://bwbraq1c6el76" path="res://Menu/Button_blue.png" id="3_hw66v"]
 [ext_resource type="Texture2D" uid="uid://cmo4w8w8pllo8" path="res://Menu/Button_yellow.png" id="4_n5sfe"]
@@ -32,6 +33,7 @@ size_flags_vertical = 4
 script = ExtResource("1_pebi7")
 
 [node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.392157, 0.392157, 0.392157, 0.784314)
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -39,6 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_a12s2")
 
 [node name="WinText" type="Label" parent="."]
 layout_mode = 1
