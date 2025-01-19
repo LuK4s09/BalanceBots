@@ -1,6 +1,6 @@
 extends Node
 
-@export var time_left: int = 16 # Lenght of one game
+@export var time_left: int = 99 # Lenght of one game
 
 @onready var TimerLabel = $TimerLabel
 
@@ -33,12 +33,14 @@ func update_TimerLabel():
 	TimerLabel.text = str(time_left)
 
 func show_PauseScreen():
+	$almost_over_Sirene.deactivate_filter()
 	var last_frame = get_viewport().get_texture()
 	var pause_screen = load("res://Menu/pause_screen.tscn").instantiate()
 	get_tree().paused = true
 	get_tree().root.add_child(pause_screen)
 
 func switch_to_GameOver():
+	$almost_over_Sirene.deactivate_filter()
 	#get last frame
 	var last_frame = get_viewport().get_texture()
 	

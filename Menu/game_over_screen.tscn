@@ -92,7 +92,6 @@ theme_override_font_sizes/font_size = 54
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vg5ug")
 text = "Play Again"
 flat = true
-icon_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Buttons/PlayAgain"]
 show_behind_parent = true

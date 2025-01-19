@@ -5,6 +5,7 @@ var last_frame: Texture = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Buttons/Continue.grab_focus()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

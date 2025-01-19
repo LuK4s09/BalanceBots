@@ -20,4 +20,6 @@ func _on_blink_timer_timeout():
 		$Filter.hide()
 	else:
 		$Filter.show()
-	
+
+func deactivate_filter():
+	$Filter.hide()
