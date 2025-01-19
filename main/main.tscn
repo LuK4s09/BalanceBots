@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bc4rmsxrekb44"]
+[gd_scene load_steps=17 format=3 uid="uid://bc4rmsxrekb44"]
 
 [ext_resource type="AudioStream" uid="uid://c07hhuid6m274" path="res://Sounds/mgd3-bbots-msc-main.wav" id="1_kd4p5"]
 [ext_resource type="Script" path="res://main/PointCounter.gd" id="1_neoe5"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ckhem5qfoq20y" path="res://main/arena.tscn" id="3_df62l"]
 [ext_resource type="FontFile" uid="uid://di1woau083u0p" path="res://digital-7.ttf" id="3_yl1s7"]
 [ext_resource type="FontFile" uid="uid://cxm8gxg6xpl71" path="res://Digital-71.ttf" id="4_y5cq3"]
+[ext_resource type="AudioStream" uid="uid://cpsktdbud73ki" path="res://Sounds/bbots_fx_px-collect.wav" id="7_hg08x"]
 [ext_resource type="PackedScene" uid="uid://b2tqaqpnbnxwb" path="res://main/almost_over_sirene.tscn" id="7_qaiyi"]
 [ext_resource type="Script" path="res://main/PackageSpawner.gd" id="8_aixl6"]
 [ext_resource type="Script" path="res://Items/Item_in_Arena/ItemSpawner.gd" id="8_nw2xw"]
@@ -71,6 +72,9 @@ theme_override_colors/font_color = Color(0.984314, 0.815686, 0.443137, 1)
 theme_override_fonts/font = ExtResource("4_y5cq3")
 theme_override_font_sizes/font_size = 86
 text = "000"
+
+[node name="collectSound" type="AudioStreamPlayer2D" parent="PointCounter"]
+stream = ExtResource("7_hg08x")
 
 [node name="GameLoopController" type="Control" parent="."]
 layout_mode = 3

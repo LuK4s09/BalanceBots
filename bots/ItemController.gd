@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var magnetSound = $magnetSound
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -21,4 +23,5 @@ func use_Item(Item_Type : String):
 			if not has_node("Magnet_on_Player"):
 				var Magnet_Scene = preload("res://Items/Magnet/magnet_on_player.tscn")
 				var Magnet_instance = Magnet_Scene.instantiate()
+				magnetSound.play()
 				add_child(Magnet_instance)

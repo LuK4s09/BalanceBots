@@ -1,6 +1,6 @@
 extends Node
 
-@export var time_left: int = 99 # Lenght of one game
+@export var time_left: int = 16 # Lenght of one game
 
 @onready var TimerLabel = $TimerLabel
 

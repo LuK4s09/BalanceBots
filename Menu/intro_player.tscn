@@ -18,11 +18,11 @@ offset_right = 1929.0
 offset_bottom = 1097.0
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("1_6bpdj")
 volume_db = -13.12
-autoplay = true
 script = ExtResource("2_k4ww6")
 
 [node name="Label" type="Label" parent="."]
