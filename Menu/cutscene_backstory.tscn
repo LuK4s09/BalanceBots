@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3xnmfwlnhfw3"]
+
+[ext_resource type="VideoStream" path="res://Menu/output.ogv" id="1_k33av"]
+[ext_resource type="Script" path="res://Menu/cutscene_backstory.gd" id="1_x4eke"]
+
+[node name="Cutscene Backstory" type="Node2D"]
+script = ExtResource("1_x4eke")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1921.0
+offset_bottom = 1080.0
+stream = ExtResource("1_k33av")
+autoplay = true
