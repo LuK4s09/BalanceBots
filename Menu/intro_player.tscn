@@ -10,6 +10,13 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="BlackScreen" type="Panel" parent="."]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+layout_mode = 0
+offset_right = 1929.0
+offset_bottom = 1097.0
+
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
@@ -27,3 +34,5 @@ offset_bottom = 1069.0
 text = "Press ENTER to skip"
 horizontal_alignment = 2
 script = ExtResource("3_m5kha")
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]

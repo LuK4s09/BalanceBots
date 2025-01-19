@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dq32yttt5pqel"]
+[gd_scene load_steps=10 format=3 uid="uid://dq32yttt5pqel"]
 
 [ext_resource type="Script" path="res://packages/Package.gd" id="1_sdsrn"]
 [ext_resource type="Texture2D" uid="uid://57a1234xyuqi" path="res://packages/Kiste_Neutral.png" id="2_jk1t7"]
-[ext_resource type="AudioStream" uid="uid://7ljpgxrmo5we" path="res://packages/beep_new.wav" id="3_tx1bh"]
+[ext_resource type="AudioStream" uid="uid://bekuacunbg8vx" path="res://Sounds/mgd3-bbots-fx-box-collision.wav" id="3_bjyos"]
 [ext_resource type="Texture2D" uid="uid://bxigxgwp6jsug" path="res://packages/Kiste_Gold.png" id="4_wwpha"]
 [ext_resource type="Texture2D" uid="uid://47upsyj8xtvk" path="res://packages/GoldParticle.png" id="5_h4p8m"]
+[ext_resource type="AudioStream" uid="uid://cdv8lybir5ha" path="res://Sounds/mgd3-bbots-fx-box-golden.wav" id="6_5bjqe"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvxwd"]
 
@@ -40,7 +41,8 @@ scale = Vector2(4.75, 4.75)
 texture = ExtResource("2_jk1t7")
 
 [node name="bonksound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_tx1bh")
+stream = ExtResource("3_bjyos")
+volume_db = -12.552
 
 [node name="GoldKiste" type="Node2D" parent="."]
 visible = false
@@ -58,5 +60,9 @@ initial_velocity_max = 37.38
 [node name="Kiste_Gold" type="Sprite2D" parent="GoldKiste"]
 texture_filter = 3
 texture = ExtResource("4_wwpha")
+
+[node name="goldSound" type="AudioStreamPlayer2D" parent="GoldKiste"]
+stream = ExtResource("6_5bjqe")
+volume_db = -12.18
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

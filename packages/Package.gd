@@ -8,6 +8,7 @@ class_name package
 
 #Sounds
 @onready var bonksound = $bonksound
+@onready var goldenSound = $GoldKiste/goldSound
 @onready var goldPackageNode = $GoldKiste
 
 # Called when the node enters the scene tree for the first time.
@@ -15,6 +16,7 @@ func _ready():
 	if randi() % 100 < golden_PACKAGE_posibility:
 		default_PACKAGE_VALUE = golden_PACKAGE_VALUE
 		goldPackageNode.show()
+		goldenSound.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -26,5 +28,5 @@ func despawn_if_below_area():
 
 #play Sound on Collision
 func _on_body_entered(body):
-	bonksound.pitch_scale = randf_range(0.3,0.5);
+	bonksound.pitch_scale = randf_range(0.8,1.2);
 	bonksound.play()

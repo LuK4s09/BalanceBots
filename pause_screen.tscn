@@ -1,0 +1,115 @@
+[gd_scene load_steps=7 format=3 uid="uid://c7kwlm0spv62y"]
+
+[ext_resource type="Texture2D" uid="uid://yk0w4e3p53jj" path="res://background/Background.png" id="1_3v0x3"]
+[ext_resource type="FontFile" uid="uid://cxm8gxg6xpl71" path="res://Digital-71.ttf" id="2_j2850"]
+[ext_resource type="Texture2D" uid="uid://cmo4w8w8pllo8" path="res://Menu/Button_yellow.png" id="3_mmabo"]
+[ext_resource type="Texture2D" uid="uid://bwbraq1c6el76" path="res://Menu/Button_blue.png" id="4_ana1b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0d4uh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irliw"]
+
+[node name="PauseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.392157, 0.392157, 0.392157, 0.784314)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3v0x3")
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Continue" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 803.0
+offset_top = 527.0
+offset_right = 1077.0
+offset_bottom = 625.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_j2850")
+theme_override_font_sizes/font_size = 54
+text = "Continue"
+flat = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Buttons/Continue"]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(136, 49)
+scale = Vector2(4.36461, 3.1875)
+texture = ExtResource("3_mmabo")
+
+[node name="PlayAgain" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 794.0
+offset_top = 680.0
+offset_right = 1087.0
+offset_bottom = 744.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_bottom = NodePath("../BackToMenu")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_j2850")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0d4uh")
+text = "Play Again"
+flat = true
+icon_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/PlayAgain"]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(144.5, 33.25)
+scale = Vector2(4.378, 3.2)
+texture = ExtResource("4_ana1b")
+
+[node name="BackToMenu" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 794.0
+offset_top = 817.0
+offset_right = 1087.0
+offset_bottom = 881.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_neighbor_top = NodePath("../PlayAgain")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_j2850")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/focus = SubResource("StyleBoxEmpty_irliw")
+text = "Menu"
+flat = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Buttons/BackToMenu"]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(144.5, 32)
+scale = Vector2(4.378, 3.2)
+texture = ExtResource("3_mmabo")
