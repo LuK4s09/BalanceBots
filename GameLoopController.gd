@@ -13,7 +13,7 @@ func _process(delta):
 	pass
 
 func _input(event):
-	if event.is_action_pressed("Enter"):
+	if event.is_action_pressed("Pause"):
 		show_PauseScreen()
 
 func _on_timer_timeout(): #Timer is set to 1s, so this function will be called every second
@@ -33,8 +33,10 @@ func update_TimerLabel():
 	TimerLabel.text = str(time_left)
 
 func show_PauseScreen():
-	get_tree().paused = true
 	var last_frame = get_viewport().get_texture()
+	var pause_screen = load("res://Menu/pause_screen.tscn").instantiate()
+	get_tree().paused = true
+	get_tree().root.add_child(pause_screen)
 
 func switch_to_GameOver():
 	#get last frame

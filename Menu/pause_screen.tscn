@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c7kwlm0spv62y"]
+[gd_scene load_steps=8 format=3 uid="uid://c7kwlm0spv62y"]
 
 [ext_resource type="Texture2D" uid="uid://yk0w4e3p53jj" path="res://background/Background.png" id="1_3v0x3"]
+[ext_resource type="Script" path="res://pause_screen.gd" id="1_7dy76"]
 [ext_resource type="FontFile" uid="uid://cxm8gxg6xpl71" path="res://Digital-71.ttf" id="2_j2850"]
 [ext_resource type="Texture2D" uid="uid://cmo4w8w8pllo8" path="res://Menu/Button_yellow.png" id="3_mmabo"]
 [ext_resource type="Texture2D" uid="uid://bwbraq1c6el76" path="res://Menu/Button_blue.png" id="4_ana1b"]
@@ -14,6 +15,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_7dy76")
 
 [node name="Background" type="TextureRect" parent="."]
 modulate = Color(0.392157, 0.392157, 0.392157, 0.784314)
@@ -39,6 +41,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Continue" type="Button" parent="Buttons"]
+process_mode = 2
 layout_mode = 0
 offset_left = 803.0
 offset_top = 527.0
@@ -58,6 +61,7 @@ scale = Vector2(4.36461, 3.1875)
 texture = ExtResource("3_mmabo")
 
 [node name="PlayAgain" type="Button" parent="Buttons"]
+process_mode = 2
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -75,7 +79,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_j2850")
 theme_override_font_sizes/font_size = 54
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0d4uh")
-text = "Play Again"
+text = "Restart"
 flat = true
 icon_alignment = 1
 
@@ -87,6 +91,7 @@ scale = Vector2(4.378, 3.2)
 texture = ExtResource("4_ana1b")
 
 [node name="BackToMenu" type="Button" parent="Buttons"]
+process_mode = 2
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -113,3 +118,7 @@ texture_filter = 1
 position = Vector2(144.5, 32)
 scale = Vector2(4.378, 3.2)
 texture = ExtResource("3_mmabo")
+
+[connection signal="pressed" from="Buttons/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Buttons/PlayAgain" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="Buttons/BackToMenu" to="." method="_on_back_to_menu_pressed"]
