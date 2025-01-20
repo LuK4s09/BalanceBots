@@ -13,6 +13,8 @@ func _on_continue_focus_entered():
 
 func _on_play_again_focus_entered():
 	play()
+	pass
 
 func _on_back_to_menu_focus_entered():
 	play()
+	pass

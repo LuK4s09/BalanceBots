@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c7kwlm0spv62y"]
+[gd_scene load_steps=13 format=3 uid="uid://c7kwlm0spv62y"]
 
 [ext_resource type="Texture2D" uid="uid://yk0w4e3p53jj" path="res://background/Background.png" id="1_3v0x3"]
 [ext_resource type="Script" path="res://pause_screen.gd" id="1_7dy76"]
@@ -15,6 +15,13 @@ font_color = Color(0.372549, 0.403922, 0.443137, 1)
 outline_size = 14
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fhq3h"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="Theme" id="Theme_ehlgc"]
+Button/styles/focus = SubResource("StyleBoxFlat_fhq3h")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0d4uh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irliw"]
@@ -27,6 +34,7 @@ offset_bottom = 40.0
 script = ExtResource("1_7dy76")
 
 [node name="PauseSelectSFX" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = ExtResource("2_hxy2w")
 script = ExtResource("3_hupah")
 
@@ -75,10 +83,13 @@ grow_vertical = 0
 [node name="Continue" type="Button" parent="Buttons"]
 process_mode = 2
 layout_mode = 0
-offset_left = 817.0
-offset_top = 538.0
-offset_right = 1066.0
-offset_bottom = 614.0
+offset_left = 815.0
+offset_top = 537.0
+offset_right = 1064.0
+offset_bottom = 613.0
+focus_neighbor_top = NodePath("../BackToMenu")
+focus_neighbor_bottom = NodePath("../PlayAgain")
+theme = SubResource("Theme_ehlgc")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_j2850")
 theme_override_font_sizes/font_size = 54
@@ -107,6 +118,7 @@ offset_right = 1087.0
 offset_bottom = 744.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_neighbor_top = NodePath("../Continue")
 focus_neighbor_bottom = NodePath("../BackToMenu")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_j2850")
@@ -138,6 +150,7 @@ offset_bottom = 881.0
 grow_horizontal = 2
 grow_vertical = 0
 focus_neighbor_top = NodePath("../PlayAgain")
+focus_neighbor_bottom = NodePath("../Continue")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_j2850")
 theme_override_font_sizes/font_size = 54
