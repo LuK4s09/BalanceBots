@@ -1,6 +1,6 @@
-extends AudioStreamPlayer
+extends AudioStreamPlayer2D
 
-@onready var backgroundMusic = $"."
+@onready var backgroundMusic = $"../BackgroundMusic"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
